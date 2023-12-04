@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload Results
+{% endblock %}
+
+{% block main %}
+   <p>Files uploaded successfully</p>
+
+   {% for f in filenames: %}
+      <tr>
+         <td>File uploaded: {{ f }}</td>
+      </tr>
+   {% endfor %}
+{% endblock %}
