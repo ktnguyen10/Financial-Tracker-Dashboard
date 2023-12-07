@@ -1,5 +1,6 @@
 import os
 import string
+import shelve
 from flask import current_app as server
 from flask import Flask, Blueprint, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -7,7 +8,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 from helpers import login_required
 from gen_database import init_database, read_file_to_db, dict_factory
-
+from financial_dashboard.dashboard import register_dashapp
 
 UPLOAD_FOLDER = os.path.join('financial_dashboard/staticFiles', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
@@ -35,6 +36,12 @@ def flash_n_print(message):
 @login_required
 def homepage():
     return render_template("homepage.html")
+
+
+@server.route("/link_to_dash")
+@login_required
+def render_dashboard():
+    return redirect('/dashboard')
 
 
 @server.route("/login", methods=["GET", "POST"])
@@ -71,6 +78,8 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["username"]
+        with shelve.open("credentials") as shelve_file:
+            shelve_file['username'] = session["user_id"]
 
         # Redirect user to home page
         return redirect("/")
@@ -87,6 +96,9 @@ def logout():
 
     # Forget any user_id
     session.clear()
+
+    with shelve.open("credentials") as shelve_file:
+        shelve_file['username'] = 'no_login'
 
     # Redirect user to login form
     return redirect("/")
@@ -141,27 +153,27 @@ def register():
     if request.method == "POST":
         # Ensure username was submitted
         if not request.form.get("username"):
-            flash('Please enter a username')
+            flash_n_print('Please enter a username')
             return redirect('register')
 
         curs.execute("SELECT username FROM users")
         if request.form.get("username") in [i["username"] for i in curs.fetchall()]:
-            flash('Username already taken')
+            flash_n_print('Username already taken')
             return redirect('register')
 
         # Ensure password was submitted
         if not request.form.get("password"):
-            flash('Please enter a password')
+            flash_n_print('Please enter a password')
             return redirect('register')
 
         # Ensure password was confirmed
         elif not request.form.get("confirmation"):
-            flash('Must confirm password')
+            flash_n_print('Must confirm password')
             return redirect('register')
 
         # Ensure passwords match
         elif request.form.get("password") != request.form.get("confirmation"):
-            flash('Passwords must match')
+            flash_n_print('Passwords must match')
             return redirect('register')
 
         # check password strength
@@ -173,7 +185,7 @@ def register():
                 else:
                     count += 1
             if count == len(request.form.get("password")):
-                flash('password must contain at least 1 number or 1 capital letter')
+                flash_n_print('password must contain at least 1 number or 1 capital letter')
                 return redirect('register')
 
         # Hash password
@@ -186,7 +198,7 @@ def register():
         )
         conn.commit()
         # Notify that registration is complete!
-        print('Successful Registration!')
+        flash_n_print('Successful Registration!')
 
         return redirect("/login")
     else:

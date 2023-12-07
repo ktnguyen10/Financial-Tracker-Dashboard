@@ -22,6 +22,20 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 
+.button
+{
+    background-color: #537fbe;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+.btn-primary
+{
+    padding: 20px 20px;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;

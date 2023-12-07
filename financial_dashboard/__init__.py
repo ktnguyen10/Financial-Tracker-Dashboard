@@ -1,4 +1,5 @@
 from flask import Flask
+import shelve
 
 
 def init_app():
@@ -10,6 +11,13 @@ def init_app():
         # Import Dash app
         from financial_dashboard.dashboard import register_dashapp
         print(routes.curs)
-        app = register_dashapp(app, routes.curs)
+
+        with shelve.open("credentials") as shelve_file:
+            try:
+                username = str(shelve_file["username"])
+            except KeyError:
+                username = 'no_login'
+
+        app = register_dashapp(app, routes.curs, username)
 
         return app

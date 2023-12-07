@@ -6,8 +6,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 from helpers import login_required
 from gen_database import init_database, read_file_to_db, dict_factory
-from dashboard_old import create_dash_app, init_dashboard
-
+from development_scripts.dashboard_old import create_dash_app
 
 UPLOAD_FOLDER = os.path.join('financial_dashboard/staticFiles', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'csv'}

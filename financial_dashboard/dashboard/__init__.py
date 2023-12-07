@@ -9,6 +9,7 @@ from dash import dash_table
 from financial_dashboard.dashboard.data_prep import gen_dataframe
 import plotly.express as px
 
+main_data = pd.DataFrame
 months_dict = {month: index for index, month in enumerate(calendar.month_name) if month}
 years_list = [i for i in range(2022, 2024)]
 
@@ -19,18 +20,24 @@ def protected_dashviews(dashapp):
             dashapp.server.view_functions[view_function] = login_required(dashapp.server.view_functions[view_function])
 
 
-def register_dashapp(flask_app, curs):
+def register_dashapp(flask_app, curs, username):
+    global main_data
     from flask import session
     # Create Plotly Dash dashboard
     app_dash = Dash(server=flask_app, external_stylesheets=[dbc.themes.BOOTSTRAP],
                     routes_pathname_prefix='/dashboard/')
     # Get data
-    data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, 'ktnguyen')
+    data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
+    main_data = data
 
     app_dash.layout = dbc.Container([
+        dcc.Location(id='url', refresh=True),
+
         dcc.Store(id='table_memory'),
 
         html.H1("Kevin Financial Dashboard", style={'textAlign': 'center'}),
+
+        html.A(html.Button("Refresh", id="refresh_data"), href='/dashboard'),
 
         html.H2("Monthly Spending Summary", style={'textAlign': 'center'}),
         dbc.Row([
@@ -64,14 +71,29 @@ def register_dashapp(flask_app, curs):
                 dcc.Graph(id='overall-pie-cat', figure=overall_pie_cat)
             ], width=12, md=6)
         ], className='mt-4'),
+
+        html.Div(id='last_update', style={'display': 'none'})
     ])
 
-    init_callbacks(app_dash, data)
+    init_callbacks(app_dash, curs, username)
 
     return app_dash.server
 
 
-def init_callbacks(dashapp, data):
+def init_callbacks(dashapp, curs, username):
+    @dashapp.callback(
+        [Output('last_update', 'children'),
+         Output('overall-pie-user', 'figure'),
+         Output('overall-pie-cat', 'figure')],
+        Input('refresh_data', 'n_clicks')
+    )
+    def refresh_data(n):
+        global main_data
+        data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
+        main_data = data
+
+        return datetime.now().strftime("%Y-%m-%d %H:%M:%S"), overall_pie_user, overall_pie_cat
+
     @dashapp.callback(
         [Output('category-spend-pie', 'figure'),
          Output('spend-by-person-stacked', 'figure'),
@@ -79,6 +101,9 @@ def init_callbacks(dashapp, data):
         Input('month_choice', 'value')
     )
     def monthly_data(selected_month):
+        global main_data
+        data = main_data
+
         filtered_data = data[(data['date'].dt.month == months_dict[selected_month]) &
                              (data['custom_category'] != 'Payment')]
 

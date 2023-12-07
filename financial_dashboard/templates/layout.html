@@ -8,13 +8,13 @@
         <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-        <link href="/static/favicon.ico" rel="icon">
+        <!--<link href="/staticFiles/favicon.ico" rel="icon">-->
 
-        <link href="/static/styles.css" rel="stylesheet">
+        <link href="/financial_dashboard/staticFiles/styles.css" rel="stylesheet">
 
         <title>Financial Dashboard: {% block title %}{% endblock %}</title>
     </head>
-<body>
+    <body>
         <nav class="bg-light border navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="/"><span class="red">FinDash</span></a>
@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     {% if session["user_id"] %}
                         <ul class="navbar-nav me-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/link_to_dash">Dashboard</a></li>
                             <li class="nav-item"><a class="nav-link" href="/upload">Upload</a></li>
                             <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
                         </ul>
