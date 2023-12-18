@@ -1,6 +1,7 @@
 import os
 import string
-import shelve
+import sqlite3
+import login_manager as lm
 from flask import current_app as server
 from flask import Flask, Blueprint, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -78,8 +79,7 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["username"]
-        with shelve.open("credentials") as shelve_file:
-            shelve_file['username'] = session["user_id"]
+        lm.store_current_user(session["user_id"])
 
         # Redirect user to home page
         return redirect("/")
@@ -97,9 +97,7 @@ def logout():
     # Forget any user_id
     session.clear()
 
-    with shelve.open("credentials") as shelve_file:
-        shelve_file['username'] = 'no_login'
-
+    lm.store_current_user('')
     # Redirect user to login form
     return redirect("/")
 
@@ -130,7 +128,13 @@ def upload_file():
                 print(file.filename + ' = ' + official_filename)
                 file.save(os.path.join(server.config['UPLOAD_FOLDER'], official_filename))
                 session['uploaded_data_file_path'] = os.path.join(server.config['UPLOAD_FOLDER'], official_filename)
-                read_file_to_db(conn, curs, session.get('uploaded_data_file_path', None), session.get("user_id"))
+                try:
+                    read_file_to_db(conn, curs, session.get('uploaded_data_file_path', None), session.get("user_id"))
+                except sqlite3.OperationalError:
+                    flash_n_print('Failed to upload data to the database. Check column and type compatibility!')
+                except:
+                    flash_n_print('Failed to upload file(s). Ensure that they are in the correct format!')
+
                 # file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
         flash_n_print('Files uploaded successfully')
         return render_template('uploaded.html', filenames=filenames)

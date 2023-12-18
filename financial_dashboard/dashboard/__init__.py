@@ -2,12 +2,12 @@ import calendar
 import pandas as pd
 from io import StringIO
 from datetime import datetime
-from dash import Dash, html, dcc, Input, Output
+from dash import Dash, html, dcc, Input, Output, dash_table
 import dash_bootstrap_components as dbc
-from helpers import login_required
-from dash import dash_table
-from financial_dashboard.dashboard.data_prep import gen_dataframe
 import plotly.express as px
+import login_manager as lm
+from helpers import login_required
+from financial_dashboard.dashboard.data_prep import gen_dataframe
 
 main_data = pd.DataFrame
 months_dict = {month: index for index, month in enumerate(calendar.month_name) if month}
@@ -20,9 +20,10 @@ def protected_dashviews(dashapp):
             dashapp.server.view_functions[view_function] = login_required(dashapp.server.view_functions[view_function])
 
 
-def register_dashapp(flask_app, curs, username):
+def register_dashapp(flask_app, curs):
     global main_data
-    from flask import session
+    username = lm.get_current_user()
+
     # Create Plotly Dash dashboard
     app_dash = Dash(server=flask_app, external_stylesheets=[dbc.themes.BOOTSTRAP],
                     routes_pathname_prefix='/dashboard/')
@@ -47,7 +48,14 @@ def register_dashapp(flask_app, curs, username):
                     value=list(months_dict.keys())[datetime.now().month - 1],
                     clearable=False,
                     options=list(months_dict.keys()))
-            ], width=4)
+            ], width=4),
+            dbc.Col([
+                dcc.Dropdown(
+                    id='year_choice',
+                    value=datetime.now().year,
+                    clearable=False,
+                    options=list(years_list))
+            ], width=4),
         ]),
 
         dbc.Row([
@@ -59,8 +67,34 @@ def register_dashapp(flask_app, curs, username):
             ], width=12, md=6)
         ], className='mt-4'),
 
-        dash_table.DataTable(id='top-spend-table'),
+        dash_table.DataTable(id='all-spend-table'),
 
+        html.Div(
+            [
+                dcc.Input(),
+                dcc.Input(style={"margin-left": "15px"})
+            ]
+        ),
+
+        html.H2("User Spend for Month and Year"),
+        dash_table.DataTable(id='user-summary-table'),
+
+        html.Div(
+            [
+                dcc.Input(),
+                dcc.Input(style={"margin-left": "15px"})
+            ]
+        ),
+
+        html.H2("Spending Categories for Month and Year"),
+        dash_table.DataTable(id='cat-summary-table'),
+
+        html.Div(
+            [
+                dcc.Input(),
+                dcc.Input(style={"margin-left": "15px"})
+            ]
+        ),
         html.H2("Overall Spending"),
 
         dbc.Row([
@@ -72,15 +106,17 @@ def register_dashapp(flask_app, curs, username):
             ], width=12, md=6)
         ], className='mt-4'),
 
+        # Timeline of purchase amounts
+
         html.Div(id='last_update', style={'display': 'none'})
     ])
 
-    init_callbacks(app_dash, curs, username)
+    init_callbacks(app_dash, curs)
 
     return app_dash.server
 
 
-def init_callbacks(dashapp, curs, username):
+def init_callbacks(dashapp, curs):
     @dashapp.callback(
         [Output('last_update', 'children'),
          Output('overall-pie-user', 'figure'),
@@ -89,6 +125,7 @@ def init_callbacks(dashapp, curs, username):
     )
     def refresh_data(n):
         global main_data
+        username = lm.get_current_user()
         data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
         main_data = data
 
@@ -98,13 +135,15 @@ def init_callbacks(dashapp, curs, username):
         [Output('category-spend-pie', 'figure'),
          Output('spend-by-person-stacked', 'figure'),
          Output('table_memory', 'data')],
-        Input('month_choice', 'value')
+        [Input('month_choice', 'value'),
+         Input('year_choice', 'value')]
     )
-    def monthly_data(selected_month):
+    def monthly_data(selected_month, selected_year):
         global main_data
         data = main_data
 
         filtered_data = data[(data['date'].dt.month == months_dict[selected_month]) &
+                             (data['date'].dt.year == selected_year) &
                              (data['custom_category'] != 'Payment')]
 
         agg_data = filtered_data.groupby(['custom_category']).agg({'amount': 'sum'})
@@ -119,12 +158,36 @@ def init_callbacks(dashapp, curs, username):
         return pie_monthly_cat, bar_monthly_person, top_spend_cats
 
     @dashapp.callback(
-        [Output('top-spend-table', 'data'),
-         Output('top-spend-table', 'columns')],
+        [Output('all-spend-table', 'data'),
+         Output('all-spend-table', 'columns')],
         Input('table_memory', 'data')
     )
     def update_monthly_cat_spend(clean_data):
         agg_data = pd.read_json(StringIO(clean_data))
         cols = [{'name': col, 'id': col} for col in agg_data.columns]
+        table = agg_data.to_dict(orient='records')
+        return table, cols
+
+    @dashapp.callback(
+        [Output('user-summary-table', 'data'),
+         Output('user-summary-table', 'columns')],
+        Input('table_memory', 'data')
+    )
+    def update_summary_spend(clean_data):
+        agg_data = pd.read_json(StringIO(clean_data))
+        agg_data = agg_data.groupby['user'].agg({'amount': 'sum'}).reset_index()
+        cols = [{'name': col, 'id': col} for col in ['User', 'Amount ($)']]
+        table = agg_data.to_dict(orient='records')
+        return table, cols
+
+    @dashapp.callback(
+        [Output('cat-summary-table', 'data'),
+         Output('cat-summary-table', 'columns')],
+        Input('table_memory', 'data')
+    )
+    def update_summary_spend(clean_data):
+        agg_data = pd.read_json(StringIO(clean_data))
+        agg_data = agg_data.groupby['custom_category'].agg({'amount': 'sum'}).reset_index()
+        cols = [{'name': col, 'id': col} for col in ['Category', 'Amount ($)']]
         table = agg_data.to_dict(orient='records')
         return table, cols

@@ -21,7 +21,7 @@ def query_columns(curs):
 def gen_dataframe(curs, username):
     df = pd.DataFrame.from_dict(query_transactions(curs, username))
     if len(df) == 0:
-        df.pd.DataFrame.from_dict(query_columns(curs))
+        df = pd.DataFrame.from_dict(query_columns(curs))
         df = pd.DataFrame(columns=list(df['name']))
         overall_pie_user = px.pie(df, values='amount', names='user')
         overall_pie_cat = px.pie(df, values='amount', names='custom_category')
@@ -46,3 +46,27 @@ def gen_dataframe(curs, username):
 
         return df, overall_pie_user, overall_pie_cat
 
+
+def preprocess_df(df, user_id):
+    trans_table_cols = ['user_id', 'transaction_date', 'post_date', 'description',
+                        'category', 'amount', 'custom_category', 'user', 'custom_group', 'date']
+    desired_dtypes = ['string', 'datetime64[ns]', 'datetime64[ns]', 'string', 'category',
+                      'float64', 'category', 'string', 'string', 'datetime64[ns]']
+
+    if len(df.columns) != len(trans_table_cols) - 2:
+        raise IndexError("Number of columns is not the proper amount.")
+
+    # add a user column
+    df['user_id'] = user_id
+    df.insert(0, 'user_id', df.pop('user_id'))
+    print(df.head())
+
+    df['date'] = df['Transaction Date'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
+    df = df.rename(mapper=dict(zip(df.columns, trans_table_cols)), axis=1)
+
+    # Check data types
+    for i, c in enumerate(df.columns):
+        if df[c].dtype != desired_dtypes[i]:
+            df[c] = df[c].astype(desired_dtypes[i])
+
+    return df
