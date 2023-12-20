@@ -2,6 +2,7 @@ import os
 import string
 import sqlite3
 import login_manager as lm
+from datetime import datetime, timedelta
 from flask import current_app as server
 from flask import Flask, Blueprint, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -9,9 +10,9 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 from helpers import login_required
 from gen_database import init_database, read_file_to_db, dict_factory
-from financial_dashboard.dashboard import register_dashapp
+from financial_dashboard.dashboard.data_prep import gen_dataframe
 
-UPLOAD_FOLDER = os.path.join('financial_dashboard/staticFiles', 'uploads')
+UPLOAD_FOLDER = os.path.join('financial_dashboard/static', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
 # flask_app.register_blueprint(dash_app, url_prefix="/dashboard")
 
@@ -30,13 +31,37 @@ def allowed_file(filename):
 
 def flash_n_print(message):
     flash(message)
-    print(message)
+    print(message + '\n')
 
 
 @server.route("/")
 @login_required
 def homepage():
-    return render_template("homepage.html")
+    username = lm.get_current_user()
+    data, _, _ = gen_dataframe(curs, username)
+    current_month = datetime.now().month
+    current_year = datetime.now().year
+    filtered_data = data[(data['date'].dt.month == current_month) &
+                         (data['date'].dt.year == current_year) &
+                         (data['custom_category'] != 'Payment')]
+    spend = filtered_data['amount'].sum()
+
+    previous_month = (datetime.utcnow().replace(day=1) - timedelta(days=1)).month
+    if previous_month == 12:
+        previous_year = datetime.now().year - 1
+    else:
+        previous_year = current_year
+
+    filtered_data = data[(data['date'].dt.month == previous_month) &
+                         (data['date'].dt.year == previous_year) &
+                         (data['custom_category'] != 'Payment') &
+                         (data["description"].apply(lambda x: 'payment' not in x.lower()))]
+    previous_spend = filtered_data['amount'].sum()
+
+    return render_template("homepage.html",
+                           username=username, spend="$" + str(round(spend, 2)), curr_month=current_month,
+                           curr_year=current_year, prev_spend="$" + str(round(previous_spend, 2)),
+                           prev_month=previous_month, prev_year=previous_year)
 
 
 @server.route("/link_to_dash")

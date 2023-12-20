@@ -6,6 +6,24 @@
 
 {% block main %}
     <div class="header">
-        <h1>This is the Homepage</h1>
+        <h1>Welcome {{ username }}</h1>
     </div>
+
+    <div class="section">
+        <table class="mx-auto w-auto text-center">
+            <thead>
+                <tr>
+                    <th>Money Spent in Month {{curr_month}} of {{curr_year}}</th>
+                    <th>Money Spent in Month {{prev_month}} of {{prev_year}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ spend }}</td>
+                    <td>{{ prev_spend }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 {% endblock %}

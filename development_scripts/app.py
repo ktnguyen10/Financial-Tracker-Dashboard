@@ -8,7 +8,7 @@ from helpers import login_required
 from gen_database import init_database, read_file_to_db, dict_factory
 from development_scripts.dashboard_old import create_dash_app
 
-UPLOAD_FOLDER = os.path.join('../financial_dashboard/staticFiles', 'uploads')
+UPLOAD_FOLDER = os.path.join('../financial_dashboard/static', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
 flask_app = Blueprint("flask_app", __name__)
 dash_app = Blueprint("dash_app", __name__)

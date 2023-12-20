@@ -27,7 +27,7 @@ def gen_dataframe(curs, username):
         overall_pie_cat = px.pie(df, values='amount', names='custom_category')
         return df, overall_pie_user, overall_pie_cat
     else:
-        df['date'] = df['transaction_date'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
+        df['date'] = df['transaction_date'].apply(lambda x: datetime.strptime(x, "%Y-%m-%d %H:%M:%S"))
         df['amount'] = df['amount'].apply(lambda x: -x)
         df['category'] = df['category'].apply(lambda x: 'Shopping' if x == 'Normal' else x)
 

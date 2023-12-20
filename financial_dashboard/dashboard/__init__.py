@@ -36,9 +36,10 @@ def register_dashapp(flask_app, curs):
 
         dcc.Store(id='table_memory'),
 
-        html.H1("Kevin Financial Dashboard", style={'textAlign': 'center'}),
+        html.H1(username + " Financial Dashboard", style={'textAlign': 'center'}),
 
-        html.A(html.Button("Refresh", id="refresh_data"), href='/dashboard'),
+        html.A(html.Button("Go Home", id="go_home", n_clicks='0'), href='/'),
+        html.A(html.Button("Refresh", id="refresh_data", n_clicks='0'), href='/dashboard'),
 
         html.H2("Monthly Spending Summary", style={'textAlign': 'center'}),
         dbc.Row([
@@ -67,35 +68,7 @@ def register_dashapp(flask_app, curs):
             ], width=12, md=6)
         ], className='mt-4'),
 
-        dash_table.DataTable(id='all-spend-table'),
-
-        html.Div(
-            [
-                dcc.Input(),
-                dcc.Input(style={"margin-left": "15px"})
-            ]
-        ),
-
-        html.H2("User Spend for Month and Year"),
-        dash_table.DataTable(id='user-summary-table'),
-
-        html.Div(
-            [
-                dcc.Input(),
-                dcc.Input(style={"margin-left": "15px"})
-            ]
-        ),
-
-        html.H2("Spending Categories for Month and Year"),
-        dash_table.DataTable(id='cat-summary-table'),
-
-        html.Div(
-            [
-                dcc.Input(),
-                dcc.Input(style={"margin-left": "15px"})
-            ]
-        ),
-        html.H2("Overall Spending"),
+        html.H2("Overall Spending", style={'textAlign': 'center'}),
 
         dbc.Row([
             dbc.Col([
@@ -106,9 +79,17 @@ def register_dashapp(flask_app, curs):
             ], width=12, md=6)
         ], className='mt-4'),
 
-        # Timeline of purchase amounts
+        dash_table.DataTable(id='all-spend-table'),
 
-        html.Div(id='last_update', style={'display': 'none'})
+        html.H2("User Spend for Month and Year", style={'textAlign': 'center'}),
+        dash_table.DataTable(id='user-summary-table'),
+
+
+        html.H2("Spending Categories for Month and Year", style={'textAlign': 'center'}),
+        dash_table.DataTable(id='cat-summary-table'),
+
+        html.Div(id='last_update', style={'display': 'none'}),
+        html.Div(id='return_call', style={'display': 'none'})
     ])
 
     init_callbacks(app_dash, curs)
@@ -130,6 +111,13 @@ def init_callbacks(dashapp, curs):
         main_data = data
 
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S"), overall_pie_user, overall_pie_cat
+
+    @dashapp.callback(
+        [Output('return_call', 'children')],
+        Input('go_home', 'n_clicks')
+    )
+    def go_home(n):
+        return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     @dashapp.callback(
         [Output('category-spend-pie', 'figure'),
@@ -175,8 +163,8 @@ def init_callbacks(dashapp, curs):
     )
     def update_summary_spend(clean_data):
         agg_data = pd.read_json(StringIO(clean_data))
-        agg_data = agg_data.groupby['user'].agg({'amount': 'sum'}).reset_index()
-        cols = [{'name': col, 'id': col} for col in ['User', 'Amount ($)']]
+        agg_data = agg_data.groupby(['user']).agg({'amount': 'sum'}).reset_index()
+        cols = [{'name': col, 'id': col} for col in ['user', 'amount']]
         table = agg_data.to_dict(orient='records')
         return table, cols
 
@@ -187,7 +175,7 @@ def init_callbacks(dashapp, curs):
     )
     def update_summary_spend(clean_data):
         agg_data = pd.read_json(StringIO(clean_data))
-        agg_data = agg_data.groupby['custom_category'].agg({'amount': 'sum'}).reset_index()
-        cols = [{'name': col, 'id': col} for col in ['Category', 'Amount ($)']]
+        agg_data = agg_data.groupby(['custom_category']).agg({'amount': 'sum'}).reset_index()
+        cols = [{'name': col, 'id': col} for col in ['custom_category', 'amount']]
         table = agg_data.to_dict(orient='records')
         return table, cols

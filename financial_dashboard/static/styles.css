@@ -53,8 +53,9 @@ nav .navbar-brand .green
     padding-top: 0.5rem;
 }
 
-th, td {
-    padding: 20px;
+table, th, td {
+    padding: 40px;
+    border: 1px solid black;
   }
 
 .header {
@@ -63,8 +64,4 @@ th, td {
     margin-bottom: 2rem;
     padding: 2rem 1rem;
     text-align: center;
-}
-
-td {
-  word-break: break-all;
 }
