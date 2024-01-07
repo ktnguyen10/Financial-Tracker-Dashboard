@@ -2,7 +2,7 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 11/2/23,11/2/23,Payment Thank You Bill Pa,,800,Payment,,
 10/31/23,10/31/23,Payment Thank You Bill Pa,,2200,Payment,,
 10/20/23,10/24/23,LOAN SU DDS,Health & Wellness,-470,Health,Kevin Family,Family
-10/22/23,10/23/23,TELLO US,Bills & Utilities,-6.81,Misc,Kevin,
+10/22/23,10/23/23,TELLO US,Bills & Utilities,-6.81,Bills,Kevin,
 10/20/23,10/22/23,HALL &amp; BIENSTOCK ORA,Health & Wellness,-517.6,Health,Kevin Family,Family
 10/9/23,10/10/23,SINGPOST - AMK CENTRAL,Office & Shipping,-8.73,Business,Mon,
 10/4/23,10/4/23,Payment Thank You Bill Pa,,250,Payment,,
@@ -12,4 +12,13 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 9/15/23,9/15/23,Payment Thank You-Mobile,,4945,Payment,,
 9/13/23,9/14/23,PAYPAL *CSENERGYPRO,Professional Services,-450,Health,Kevin Family,Family
 9/12/23,9/13/23,HALL &amp; BIENSTOCK ORA,Health & Wellness,-4400,Health,Kevin Family,Family
-9/1/23,9/1/23,ANNUAL MEMBERSHIP FEE,Fees & Adjustments,-95,Misc,,
+9/1/23,9/1/23,ANNUAL MEMBERSHIP FEE,Fees & Adjustments,-95,Annual Fee,,
+12/30/23,1/1/24,COURTYARD BY MARRIOTT,Travel,-909.57,Travel,Both,
+12/29/23,12/29/23,Payment Thank You Bill Pa,,98.66,Payment,,
+12/21/23,12/22/23,TELLO US,Bills & Utilities,-6.82,Bills,Kevin,
+12/6/23,12/7/23,SINGPOST - AMK CENTRAL,Office & Shipping,-26.26,Business,Mon,
+12/2/23,12/3/23,SINGPOST - AMK CENTRAL,Office & Shipping,-8.93,Business,Mon,
+12/1/23,12/1/23,Payment Thank You Bill Pa,,995.02,Payment,,
+11/23/23,11/24/23,UNITED AIR  1623440756755,Travel,-49.83,Travel,Both,
+11/21/23,11/22/23,TELLO US,Bills & Utilities,-6.82,Bills,Kevin,
+11/20/23,11/21/23,SINGPOST - AMK CENTRAL,Office & Shipping,-8.87,Business,Mon,

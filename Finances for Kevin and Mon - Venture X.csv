@@ -77,7 +77,7 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 8/19/23,8/19/23,SP MOOMHEALTH,Health Care,-48.59,Health,Mon,
 8/15/23,8/19/23,BUS/MRT 306371396,Other Travel,-2.72,Transport,Kevin,
 8/14/23,8/18/23,BUS/MRT 305982959,Other Travel,-2.72,Transport,Kevin,
-8/17/23,8/18/23,GUARDIAN- AMK HUB,Health Care,-10.77,Necessity,Both,
+8/17/23,8/18/23,GUARDIAN- AMK HUB,Health Care,-10.77,Health,Both,
 8/16/23,8/17/23,SINGPOST - AMK CENTRAL,Other Services,-8.78,Business,Mon,
 8/14/23,8/15/23,SINGPOST - AMK CENTRAL,Other Services,-8.83,Business,Mon,
 8/12/23,8/14/23,WWW.GRABTAXI.COM,Other Travel,-8.48,Transport,Both,Bali
@@ -195,8 +195,8 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 5/24/23,5/25/23,STARBUCKS@HONG LEONG(HLB),Dining,-4.91,Misc,Both,
 5/23/23,5/24/23,COTHTL,Other Travel,99.07,Hong Kong,Both,
 5/23/23,5/24/23,COTHTL,Other Travel,-574.34,Hong Kong,Both,
-5/22/23,5/22/23,GlobalTaxFreeCompany,Other Services,9.05,Korea,Both,
-5/18/23,5/19/23,Grab* A-4UQH8KOWWIFK,Other Travel,-19.8,,Both,
+5/22/23,5/22/23,GlobalTaxFreeCompany,Other Services,9.05,Bills,Both,Korea
+5/18/23,5/19/23,Grab* A-4UQH8KOWWIFK,Other Travel,-19.8,Transport,Both,
 5/16/23,5/16/23,ELECTRONIC PAYMENT,Payment/Credit,749.46,Payment,,
 5/8/23,5/10/23,NAM NAM - T3,Dining,-19.98,Food,Both,
 5/7/23,5/8/23,KURASU,Dining,-5.67,Food,Both,
@@ -206,7 +206,7 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 5/6/23,5/8/23,AUNTIE ANNE'S - AMK HUB,Dining,-2.88,Food,Both,
 5/6/23,5/8/23,7-ELEVEN -339 AMK AVE 1,Merchandise,-7.79,Food,Both,
 5/5/23,5/6/23,IROHA MART - PLAZA SINGAP,Merchandise,-13.8,Food,Both,
-5/5/23,5/6/23,WATSON'S,Health Care,-4.52,Necessities,Both,
+5/5/23,5/6/23,WATSON'S,Health Care,-4.52,Health,Both,
 5/5/23,5/6/23,Menya Kokoro PS,Dining,-28.31,Food,Both,
 5/3/23,5/4/23,PROJECTOR X PTE LTD,Entertainment,-23.74,Entertainment,Both,
 5/2/23,5/3/23,PROJECTOR X :PICTUREHOUSE,Entertainment,-9.77,Entertainment,Both,
@@ -375,12 +375,12 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 3/5/23,3/7/23,RYANAIR 224XF8NJP,Airfare,-16.11,Travel,Mon,Mon London
 3/6/23,3/7/23,SINGPOST - TOWNER,Other Services,-8.87,Business,Mon,
 3/6/23,3/7/23,SP THEPROVIDORE_SHOP,Merchandise,-40.99,Shopping,Both,
-3/6/23,3/7/23,COTFLT,Other Travel,-1634.8,Korea,Kevin,
+3/6/23,3/7/23,COTFLT,Other Travel,-1634.8,Travel,Kevin,Korea
 3/5/23,3/6/23,FAIRPRICE XTRA-AMK,Merchandise,-34.06,Groceries,Both,
-3/4/23,3/6/23,STARBUCKS@VIVO(VC3),Dining,-7.45,Misc,Both,
-3/2/23,3/3/23,FLYSCOOT.COM0000000DB819A,Airfare,-130.84,Korea,Both,
-2/28/23,3/2/23,AIRASIA_FD OYZPHK,Airfare,-679.46,Thailand,Both,
-2/28/23,3/1/23,AIRBNB * HM5QZNM4QB,Other Travel,-296.91,Thailand,Both,
+3/4/23,3/6/23,STARBUCKS@VIVO(VC3),Dining,-7.45,Food,Both,
+3/2/23,3/3/23,FLYSCOOT.COM0000000DB819A,Airfare,-130.84,Travel,Both,Korea
+2/28/23,3/2/23,AIRASIA_FD OYZPHK,Airfare,-679.46,Travel,Both,Thailand
+2/28/23,3/1/23,AIRBNB * HM5QZNM4QB,Other Travel,-296.91,Travel,Both,Thailand
 2/26/23,2/28/23,MCDONALD'S (FR),Dining,-11.15,Food,Both,
 2/25/23,2/27/23,FAIRPRICE XTRA-AMK,Merchandise,-22.11,Groceries,Both,
 2/25/23,2/27/23,MARKS & SPENCER - RAFFLES,Merchandise,-19.68,Groceries,Both,
@@ -393,7 +393,7 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 2/18/23,2/20/23,DON DON DONKI,Merchandise,-48.16,Groceries,Both,
 2/18/23,2/20/23,SJ CLINIC & SURGERY (ORC),Health Care,-72.85,Health,Mon,
 2/16/23,2/17/23,SINGPOST - TOWNER,Other Services,-8.97,Business,Mon,
-2/16/23,2/16/23,CAPITAL ONE TRAVEL CREDIT,Payment/Credit,101.14,Korea,Kevin,
+2/16/23,2/16/23,CAPITAL ONE TRAVEL CREDIT,Payment/Credit,101.14,Travel Credit,Kevin,Korea
 2/15/23,2/16/23,SINGPOST - AMK CENTRAL,Other Services,-15.95,Business,Mon,
 2/12/23,2/13/23,Grab* A-4IHLSSAGWI3Q,Other Travel,-13.7,Transport,Both,
 2/11/23,2/13/23,FAIRPRICE XTRA-AMK,Merchandise,-44.69,Groceries,Both,
@@ -412,7 +412,7 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 1/30/23,1/31/23,EB PRISM CLUB PRESALE,Entertainment,-49.61,Entertainment,Both,
 1/29/23,1/30/23,CHEERS - BOTANIC GARDEN M,Merchandise,-3.82,Food,Both,
 1/28/23,1/30/23,SKIN PPLE,Other Services,-239.36,Shopping,Mon,
-1/27/23,1/28/23,SP TUFT CLUB,Merchandise,-289.99,Misc,Kevin,
+1/27/23,1/28/23,SP TUFT CLUB,Merchandise,-289.99,Entertainment,Kevin,
 1/20/23,1/23/23,CATHAY CINEPLEX AMK HUB,Entertainment,-13.27,Entertainment,Kevin,
 1/21/23,1/23/23,COTFLT,Other Travel,-101.14,Korea,Both,
 1/20/23,1/21/23,SINGPOST - ORCHARD,Other Services,-26.62,Business,Mon,
@@ -420,7 +420,7 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 1/20/23,1/21/23,INNISFREE JUNCTION 8,Merchandise,-70.53,Health,Both,
 1/19/23,1/21/23,CATHAY CINEPLEXES PTE,Entertainment,-26.67,Entertainment,Kevin,
 1/20/23,1/21/23,GOURMET FOOD HOLDINGS,Dining,-18.05,Food,Both,
-1/12/23,1/12/23,ELECTRONIC PAYMENT,Payment/Credit,1891.67,Payment,Kevin,
+1/12/23,1/12/23,ELECTRONIC PAYMENT,Payment/Credit,1891.67,Payment,,
 1/5/23,1/7/23,MARQUEE SINGAPORE - TI,Dining,-71.79,Entertainment,Kevin,
 1/1/23,1/2/23,WWW.THEGELBOTTLE.SG,Merchandise,-43.31,Shopping,Kevin,
 12/28/22,12/29/22,IMPACT MMA,Other Services,-1339.88,Health,Kevin,
@@ -459,3 +459,96 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 10/5/23,10/10/23,BUS/MRT 329430371,Other Travel,-2.69,Transport,Kevin,
 10/7/23,10/9/23,PAYPAL *COUCOUFLORA,Merchandise,-170.47,Misc,Kevin,
 10/4/23,10/9/23,BUS/MRT 328953672,Other Travel,-2.29,Transport,Kevin,
+1/4/24,1/5/24,BREADTALK-AMK L1,Dining,-1.66,Food,Mon,
+1/3/24,1/4/24,SP CARAMEL MONSTER,Merchandise,-121.46,Shopping,Mon,
+1/2/24,1/3/24,SJ CLINIC & SURGERY (ORC),Healthcare,-182.12,Health,Mon,
+12/29/23,12/30/23,CITY OF SB DTP KIOSKS,Other Services,-6,Travel,Both,NYC
+12/29/23,12/30/23,ITALIAN POTTERY OUTLET,Merchandise,-21.75,Shopping,Mon,NYC
+12/28/23,12/29/23,TARGET        00028720,Merchandise,-62.12,Health,Both,NYC
+12/27/23,12/28/23,CHEVRON 0092580,Gas/Automotive,-26.85,Gas,Kevin,NYC
+12/27/23,12/28/23,LULULEMON CAMARILLO,Merchandise,-172.67,Shopping,Both,NYC
+12/27/23,12/27/23,SP MOOMHEALTH,Health Care,-45.77,Health,Mon,NYC
+12/27/23,12/27/23,TNF Camarillo,Merchandise,-76.83,Shopping,Mon,NYC
+12/21/23,12/27/23,BUS/MRT 364621554,Other Travel,-3.55,Transport,Both,NYC
+12/25/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/25/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.1,Transport,Both,NYC
+12/25/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/25/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/25/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/25/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/25/23,12/26/23,LinkedIn Pre 9042678746,Other Services,-37.84,Misc,Mon,
+12/23/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/23/23,12/26/23,CVS/PHARMACY #10041,Health Care,-7.39,Health,Mon,NYC
+12/23/23,12/26/23,"SP POLENE USA, INC.",Merchandise,-430,Shopping,Mon,NYC
+12/23/23,12/26/23,Uniqlo USA LLC,Merchandise,-53.8,Shopping,Mon,NYC
+12/23/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/23/23,12/26/23,NYC TAXI 1246 12460010,Other Travel,-100,Transport,Both,NYC
+12/23/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/23/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/24/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/23/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/23/23,12/26/23,MTA*NYCT PAYGO,Other Travel,-2.9,Transport,Both,NYC
+12/20/23,12/22/23,HY ATTRACTIONS MANAGER,Entertainment,-119.76,Entertainment,Both,NYC
+12/21/23,12/22/23,BREADTALK WHEELOCK PLACE,Dining,-1.73,Food,Mon,
+12/14/23,12/19/23,BUS/MRT 361403545,Other Travel,-2.35,Transport,Kevin,
+12/17/23,12/19/23,UBER   *TRIP,Other Travel,-30.09,Transport,Mon,
+12/18/23,12/19/23,EXCUSE MY FRENCH,Merchandise,-252.55,Shopping,Mon,
+12/13/23,12/18/23,BUS/MRT 361011936,Other Travel,-2.76,Transport,Kevin,
+12/11/23,12/15/23,BUS/MRT 360220914,Other Travel,-2.73,Transport,Kevin,
+12/14/23,12/15/23,SJ CLINIC & SURGERY (ORC),Health Care,-154.13,Health,Mon,
+12/10/23,12/14/23,BUS/MRT 359923847,Other Travel,-2.85,Transport,Kevin,
+12/7/23,12/12/23,BUS/MRT 358271813,Other Travel,-2.72,Transport,Kevin,
+12/8/23,12/12/23,BUS/MRT 358759729,Other Travel,-2.76,Transport,Kevin,
+12/9/23,12/9/23,CAPITAL ONE MEMBER FEE,Fee/Interest Charge,-395,Annual Fee,,
+12/5/23,12/9/23,BUS/MRT 357417681,Other Travel,-2.72,Transport,Kevin,
+12/4/23,12/8/23,BUS/MRT 357005073,Other Travel,-4.67,Transport,Kevin,
+11/30/23,12/5/23,BUS/MRT 355060107,Other Travel,-2.73,Transport,Kevin,
+12/1/23,12/5/23,BUS/MRT 355559842,Other Travel,-2.76,Transport,Kevin,
+11/29/23,12/4/23,BUS/MRT 354584907,Other Travel,-2.74,Transport,Kevin,
+12/2/23,12/2/23,CAPITAL ONE MOBILE PYMT,Payment/Credit,500,Payment,,
+11/28/23,12/2/23,BUS/MRT 354122069,Other Travel,-2.72,Transport,Kevin,
+11/28/23,12/2/23,BUS/MRT 354333160,Other Travel,-2.3,Transport,Kevin,
+11/27/23,12/1/23,BUS/MRT 353710150,Other Travel,-2.75,Transport,Kevin,
+10/7/23,11/29/23,LLL ATHLETICA UK LTD,Merchandise,36.55,Shopping,Mon,
+11/28/23,11/29/23,WESTON CORP - JUNCTION 8,Merchandise,-157.15,Shopping,Mon,
+11/24/23,11/28/23,BUS/MRT 352343145,Other Travel,-2.35,Transport,Kevin,
+11/23/23,11/28/23,BUS/MRT 351838468,Other Travel,-2.72,Transport,Kevin,
+11/23/23,11/28/23,BUS/MRT 352049266,Other Travel,-1.93,Transport,Kevin,
+11/22/23,11/27/23,BUS/MRT 351361719,Other Travel,-2.73,Transport,Kevin,
+11/21/23,11/25/23,BUS/MRT 350890282,Other Travel,-2.73,Transport,Kevin,
+11/23/23,11/24/23,SJ CLINIC & SURGERY (ORC),Health Care,-193.91,Health,Kevin,
+11/19/23,11/24/23,BUS/MRT 350174972,Other Travel,-2.22,Transport,Kevin,
+11/19/23,11/24/23,BUS/MRT 350044962,Other Travel,-2.22,Transport,Kevin,
+11/22/23,11/24/23,AUNTIE ANNE'S - AMK HUB,Dining,-2.55,Food,Mon,
+10/7/23,11/21/23,LLL ATHLETICA UK LTD,Merchandise,36.07,Shopping,Mon,
+11/16/23,11/21/23,BUS/MRT 348653065,Other Travel,-3.41,Transport,Kevin,
+11/17/23,11/21/23,BUS/MRT 349484598,Other Travel,-2.71,Transport,Kevin,
+11/16/23,11/21/23,BUS/MRT 348863134,Other Travel,-3.49,Transport,Kevin,
+11/17/23,11/21/23,BUS/MRT 349316895,Other Travel,-2.77,Transport,Kevin,
+11/15/23,11/20/23,BUS/MRT 348183058,Other Travel,-2.36,Transport,Kevin,
+11/18/23,11/18/23,Grab* A-5MEP6JIWWH5L,Other Travel,-11.48,Transport,Kevin,
+11/14/23,11/18/23,BUS/MRT 347921444,Other Travel,-2.19,Transport,Kevin,
+11/17/23,11/18/23,MEIDI-YA@MW(BAKERY),Dining,-3.94,Food,Mon,
+11/17/23,11/18/23,SJ CLINIC & SURGERY (ORC),Health Care,-136.54,Health,Mon,
+11/13/23,11/17/23,BUS/MRT 347356025,Other Travel,-2.86,Transport,Mon,
+11/17/23,11/17/23,BY KATE PT* BYKATEPTEL,Other Services,-118.2,Shopping,Mon,
+11/17/23,11/17/23,SP SUSY + BAE,Merchandise,-170.3,Shopping,Mon,
+11/12/23,11/16/23,BUS/MRT 347162622,Other Travel,-2.74,Transport,Kevin,
+11/9/23,11/15/23,BUS/MRT 345536708,Other Travel,-2.35,Transport,Kevin,
+11/10/23,11/15/23,BUS/MRT 346043890,Other Travel,-2.68,Transport,Kevin,
+11/10/23,11/15/23,BUS/MRT 346253051,Other Travel,-1.59,Transport,Kevin,
+11/9/23,11/15/23,BUS/MRT 345750825,Other Travel,-2.93,Transport,Kevin,
+11/8/23,11/13/23,BUS/MRT 345052592,Other Travel,-2.72,Transport,Kevin,
+11/7/23,11/11/23,BUS/MRT 344600594,Other Travel,-2.73,Transport,Kevin,
+11/7/23,11/11/23,BUS/MRT 344816819,Other Travel,-2.7,Transport,Kevin,
+11/6/23,11/10/23,BUS/MRT 344178670,Other Travel,-2.33,Transport,Kevin,

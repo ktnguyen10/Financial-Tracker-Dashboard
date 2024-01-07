@@ -41,10 +41,6 @@ def homepage():
     data, _, _ = gen_dataframe(curs, username)
     current_month = datetime.now().month
     current_year = datetime.now().year
-    filtered_data = data[(data['date'].dt.month == current_month) &
-                         (data['date'].dt.year == current_year) &
-                         (data['custom_category'] != 'Payment')]
-    spend = filtered_data['amount'].sum()
 
     previous_month = (datetime.utcnow().replace(day=1) - timedelta(days=1)).month
     if previous_month == 12:
@@ -52,11 +48,20 @@ def homepage():
     else:
         previous_year = current_year
 
-    filtered_data = data[(data['date'].dt.month == previous_month) &
-                         (data['date'].dt.year == previous_year) &
-                         (data['custom_category'] != 'Payment') &
-                         (data["description"].apply(lambda x: 'payment' not in x.lower()))]
-    previous_spend = filtered_data['amount'].sum()
+    try:
+        filtered_data = data[(data['date'].dt.month == current_month) &
+                             (data['date'].dt.year == current_year) &
+                             (data['custom_category'] != 'Payment')]
+        spend = filtered_data['amount'].sum()
+
+        filtered_data = data[(data['date'].dt.month == previous_month) &
+                             (data['date'].dt.year == previous_year) &
+                             (data['custom_category'] != 'Payment') &
+                             (data["description"].apply(lambda x: 'payment' not in x.lower()))]
+        previous_spend = filtered_data['amount'].sum()
+    except AttributeError:
+        spend = 0
+        previous_spend = 0
 
     return render_template("homepage.html",
                            username=username, spend="$" + str(round(spend, 2)), curr_month=current_month,
