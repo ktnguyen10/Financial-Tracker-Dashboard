@@ -7,7 +7,7 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 import login_manager as lm
 from helpers import login_required
-from financial_dashboard.dashboard.data_prep import gen_dataframe
+from financial_dashboard.dashboard.data_cleanup import gen_dataframe, plot_sankey
 
 main_data = pd.DataFrame
 months_dict = {month: index for index, month in enumerate(calendar.month_name) if month}
@@ -29,7 +29,6 @@ def register_dashapp(flask_app, curs):
                     routes_pathname_prefix='/dashboard/')
     # Get data
     data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
-    data = data.drop_duplicates(subset=list(data.columns[data.columns != 'id']))
     main_data = data
 
     user_list = [x for x in list(data['user'].unique()) if isinstance(x, str)]
@@ -45,7 +44,7 @@ def register_dashapp(flask_app, curs):
         html.A(html.Button("Go Home", id="go_home", n_clicks='0'), href='/'),
         html.A(html.Button("Refresh", id="refresh_data", n_clicks='0'), href='/dashboard'),
 
-        html.H2("Overall Data by Category", style={'textAlign': 'center'}),
+        html.H2("Annual Spending by Category", style={'textAlign': 'center'}),
         dbc.Row([
             dbc.Col([
                 dcc.Dropdown(
@@ -73,12 +72,17 @@ def register_dashapp(flask_app, curs):
         dbc.Row([
             dbc.Col([
                 dcc.Graph(id='category-by-month-bar', figure={})
-            ], width=12),
+            ], width=9),
+            dbc.Col([
+                dash_table.DataTable(id='category-statistics')
+            ], width=3),
+        ], align='center'),
+
+        dbc.Row([
+            dbc.Col([
+                dcc.Graph(id='annual-breakdown-sankey', figure={})
+            ], width=12)
         ]),
-
-        html.Br(),
-
-        dash_table.DataTable(id='category-statistics'),
 
         html.Br(),
         html.H2("Monthly Spending Summary", style={'textAlign': 'center'}),
@@ -131,6 +135,7 @@ def register_dashapp(flask_app, curs):
         html.Br(),
         html.H2("Spending Categories for Month and Year", style={'textAlign': 'center'}),
         dash_table.DataTable(id='cat-summary-table'),
+        html.Br(),
 
         html.Div(id='last_update', style={'display': 'none'}),
         html.Div(id='return_call', style={'display': 'none'})
@@ -152,7 +157,6 @@ def init_callbacks(dashapp, curs):
         global main_data
         username = lm.get_current_user()
         data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
-        data = data.drop_duplicates(subset=list(data.columns[data.columns != 'id']))
         main_data = data
 
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S"), overall_pie_user, overall_pie_cat
@@ -160,7 +164,8 @@ def init_callbacks(dashapp, curs):
     @dashapp.callback(
         [Output('category-statistics', 'data'),
          Output('category-statistics', 'columns'),
-         Output('category-by-month-bar', 'figure')],
+         Output('category-by-month-bar', 'figure'),
+         Output('annual-breakdown-sankey', 'figure')],
         [Input('cat_choice', 'value'),
          Input('year_choice_1', 'value'),
          Input('user_choice', 'value')]
@@ -169,34 +174,43 @@ def init_callbacks(dashapp, curs):
         global main_data
         data = main_data
 
+        # Sankey
+        annual_breakdown_sankey = plot_sankey(data, selected_year)
+
         data['month'] = data['date'].dt.month
-        data['month_name'] = data['month'].apply(lambda x: calendar.month_abbr[x])
+        data['month_name'] = data['month'].apply(lambda m: calendar.month_abbr[m])
 
         if selected_user == 'all':
             filtered_data = (data[(data['custom_category'] == selected_cat) & (data['date'].dt.year == selected_year)].
-                             groupby(by=['month_name']).agg({'amount': 'sum'}))
-            filtered_data.reset_index(inplace=True)
-            ordered_months = [calendar.month_abbr[i + 1] for i in range(12)]
-            filtered_data.index = pd.CategoricalIndex(filtered_data['month_name'], categories=ordered_months,
-                                                      ordered=True)
+                             groupby(by=['month_name']).agg({'amount': 'sum'}).reset_index())
+            for m in range(12):
+                month_label = calendar.month_abbr[m+1]
+                if month_label not in filtered_data['month_name']:
+                    filtered_data.loc[len(filtered_data.index)] = [month_label, 0]
+            ordered_mths = [calendar.month_abbr[i + 1] for i in range(12)]
+            filtered_data.index = pd.CategoricalIndex(filtered_data['month_name'], categories=ordered_mths, ordered=True)
             filtered_data = filtered_data.sort_index().reset_index(drop=True)
             bar_cat_by_month = px.bar(filtered_data, x='month_name', y='amount')
         else:
             filtered_data = (data[(data['custom_category'] == selected_cat) & (data['date'].dt.year == selected_year)].
-                             groupby(by=['user', 'month_name']).agg({'amount': 'sum'}))
-            filtered_data.reset_index(inplace=True)
+                             groupby(by=['user', 'month_name']).agg({'amount': 'sum'}).reset_index())
             filtered_data = filtered_data[filtered_data['user'] == selected_user]
-            ordered_months = [calendar.month_abbr[i + 1] for i in range(12)]
-            filtered_data.index = pd.CategoricalIndex(filtered_data['month_name'], categories=ordered_months,
-                                                      ordered=True)
+            for u in data['user'].unique():
+                for x in range(12):
+                    month_label = calendar.month_abbr[x+1]
+                    if month_label not in filtered_data['month_name']:
+                        filtered_data.loc[len(filtered_data.index)] = [u, month_label, 0]
+            ordered_mths = [calendar.month_abbr[i + 1] for i in range(12)]
+            filtered_data.index = pd.CategoricalIndex(filtered_data['month_name'], categories=ordered_mths, ordered=True)
             filtered_data = filtered_data.sort_index().reset_index(drop=True)
             bar_cat_by_month = px.bar(filtered_data, x='month_name', y='amount', color='user')
 
+        filtered_data = filtered_data.loc[~(filtered_data == 0).any(axis=1)]
         agg_data = filtered_data['amount'].describe().reset_index()
         cols = [{'name': col, 'id': col} for col in agg_data.columns]
         table = agg_data.to_dict(orient='records')
 
-        return table, cols, bar_cat_by_month
+        return table, cols, bar_cat_by_month, annual_breakdown_sankey
 
     @dashapp.callback(
         Output('return_call', 'children'),
@@ -220,9 +234,11 @@ def init_callbacks(dashapp, curs):
                              (data['date'].dt.year == selected_year) &
                              (data['custom_category'] != 'Payment')]
 
+        # Pie Chart
         agg_data = filtered_data.groupby(['custom_category']).agg({'amount': 'sum'})
         pie_monthly_cat = px.pie(agg_data.reset_index(), values='amount', names='custom_category')
 
+        # Bar Chart
         agg_data = filtered_data.groupby(['user', 'custom_category']).agg({'amount': 'sum'})
         bar_monthly_person = px.bar(agg_data.reset_index(), x='user', y='amount', color='custom_category')
 

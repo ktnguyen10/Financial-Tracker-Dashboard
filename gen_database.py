@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 from datetime import datetime
-from financial_dashboard.dashboard.data_prep import preprocess_df
+from financial_dashboard.dashboard.data_cleanup import preprocess_df_for_db
 
 
 def init_database():
@@ -34,7 +34,7 @@ def read_file_to_db(conn, curs, file, user_id):
     df = pd.read_csv(file, encoding='unicode_escape')
     print(df.head())
 
-    df = preprocess_df(df, user_id)
+    df = preprocess_df_for_db(df, user_id)
 
     df.to_sql('transactions', conn, if_exists='append', index=False)  # write df into the database
     # curs.execute("""

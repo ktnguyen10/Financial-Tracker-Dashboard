@@ -10,7 +10,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 from helpers import login_required
 from gen_database import init_database, read_file_to_db, dict_factory
-from financial_dashboard.dashboard.data_prep import gen_dataframe
+from financial_dashboard.dashboard.data_cleanup import gen_dataframe
 
 UPLOAD_FOLDER = os.path.join('financial_dashboard/static', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
@@ -30,7 +30,7 @@ def allowed_file(filename):
 
 
 def flash_n_print(message):
-    flash(message)
+    flash(message + '\n')
     print(message + '\n')
 
 
@@ -124,6 +124,17 @@ def login():
 def logout():
     """Log user out"""
 
+    # Forget any user_id
+    session.clear()
+
+    lm.store_current_user('')
+    # Redirect user to login form
+    return redirect("/")
+
+
+@server.route("/profile")
+@login_required
+def user_profile():
     # Forget any user_id
     session.clear()
 
