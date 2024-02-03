@@ -13,8 +13,21 @@ def query_transactions(curs, username):
     return data
 
 
-def query_columns(curs):
+def query_user_income(curs, username):
+    curs.execute("SELECT annual_income,side_income FROM users WHERE username LIKE (?)", (username,))
+    data = curs.fetchall()
+    return data
+
+
+def query_trans_columns(curs):
     curs.execute("PRAGMA table_info(transactions)")
+    data = curs.fetchall()
+    # Data is returned as a dictionary
+    return data
+
+
+def query_user_columns(curs):
+    curs.execute("PRAGMA table_info(users)")
     data = curs.fetchall()
     # Data is returned as a dictionary
     return data
@@ -22,12 +35,15 @@ def query_columns(curs):
 
 def gen_dataframe(curs, username):
     df = pd.DataFrame.from_dict(query_transactions(curs, username))
+    # Salaries
+    df_income = pd.DataFrame.from_dict(query_user_income(curs, username))
     if len(df) == 0:
-        df = pd.DataFrame.from_dict(query_columns(curs))
+        df = pd.DataFrame.from_dict(query_trans_columns(curs))
         df = pd.DataFrame(columns=list(df['name']))
+        df_income = pd.DataFrame.from_dict(query_user_columns(curs))
         overall_pie_user = px.pie(df, values='amount', names='user')
         overall_pie_cat = px.pie(df, values='amount', names='custom_category')
-        return df, overall_pie_user, overall_pie_cat
+        return df, df_income, overall_pie_user, overall_pie_cat
     else:
         df['date'] = df['transaction_date'].apply(lambda x: datetime.strptime(x, "%Y-%m-%d %H:%M:%S"))
         df['amount'] = df['amount'].apply(lambda x: -x)
@@ -44,6 +60,14 @@ def gen_dataframe(curs, username):
         df['custom_category'] = (df['custom_category'].
                                  apply(lambda x: 'Travel' if x in location_data else x))
 
+        # Categorical Text Filtering
+        df['custom_category'] = (df['custom_category'].
+                                 apply(lambda x: 'Health' if x in ['Necessities', 'Necessity'] else x))
+        df['custom_category'] = (df['custom_category'].
+                                 apply(lambda x: 'Food' if x in ['dining', 'Dining'] else x))
+        df['custom_category'] = (df['custom_category'].
+                                 apply(lambda x: 'Travel' if x in ['Travel Credit'] else x))
+
         df = df.drop_duplicates(subset=list(df.columns[df.columns != 'id']))
 
         overall_data = df[~df['custom_category'].isin(['Payment', 'Travel Credit'])]
@@ -58,7 +82,7 @@ def gen_dataframe(curs, username):
         overall_data_cat = overall_data_cat[~(overall_data_cat['amount'] < 500)]
         overall_pie_cat = px.pie(overall_data_cat, values='amount', names='custom_category')
 
-        return df, overall_pie_user, overall_pie_cat
+        return df, df_income, overall_pie_user, overall_pie_cat
 
 
 def preprocess_df_for_db(df, user_id):
@@ -86,11 +110,11 @@ def preprocess_df_for_db(df, user_id):
     return df
 
 
-def plot_sankey(df, year):
+def plot_sankey(df, df_income, year):
     df = df[(df['date'].dt.year == year) & (df['custom_category'] != 'Payment')]
 
     node_labels_start = ['Salary', 'Business']
-    node_labels_start_weights = [60000, 3000]
+    node_labels_start_weights = [df_income['annual_income'][0], df_income['side_income'][0]]
     node_labels_l1 = ['Total Income']
     node_labels_l2 = list(df['user'].unique())
     node_labels_l3 = list(df['custom_category'].unique())

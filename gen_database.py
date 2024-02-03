@@ -16,7 +16,7 @@ def init_database():
     )
     curs.execute(
         "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
-        "username TEXT NOT NULL, hash TEXT NOT NULL) "
+        "username TEXT NOT NULL, hash TEXT NOT NULL, annual_income NUMERIC NOT NULL, side_income NUMERIC NOT NULL) "
     )
     conn.commit()
     return conn, curs
@@ -36,12 +36,5 @@ def read_file_to_db(conn, curs, file, user_id):
 
     df = preprocess_df_for_db(df, user_id)
 
-    df.to_sql('transactions', conn, if_exists='append', index=False)  # write df into the database
-    # curs.execute("""
-    #     UPDATE transactions
-    #     SET ID = temp.column_list
-    #     FROM temporary_table AS temp
-    #     WHERE transactions.id = temp.id;
-    #     """)  # update the schedule table in the database
-    # curs.execute('DROP TABLE temporary_table')
-    # conn.commit()
+    # write df into the database
+    df.to_sql('transactions', conn, if_exists='append', index=False)

@@ -3,25 +3,18 @@ import string
 import sqlite3
 import login_manager as lm
 from datetime import datetime, timedelta
-from flask import current_app as server
-from flask import Flask, Blueprint, flash, redirect, render_template, request, session
+from flask import flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 from helpers import login_required
-from gen_database import init_database, read_file_to_db, dict_factory
+from financial_dashboard.routes import curs, conn
+from gen_database import read_file_to_db
 from financial_dashboard.dashboard.data_cleanup import gen_dataframe
+from financial_dashboard import app
 
-UPLOAD_FOLDER = os.path.join('financial_dashboard/static', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
-# flask_app.register_blueprint(dash_app, url_prefix="/dashboard")
-
-# server = Flask(__name__)
-server.secret_key = 'abc123'
-conn, curs = init_database()
-server.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-server.config["SESSION_TYPE"] = "filesystem"
-Session(server)
+Session(app)
 
 
 def allowed_file(filename):
@@ -34,48 +27,15 @@ def flash_n_print(message):
     print(message + '\n')
 
 
-@server.route("/")
-@login_required
-def homepage():
-    username = lm.get_current_user()
-    data, _, _ = gen_dataframe(curs, username)
-    current_month = datetime.now().month
-    current_year = datetime.now().year
-
-    previous_month = (datetime.utcnow().replace(day=1) - timedelta(days=1)).month
-    if previous_month == 12:
-        previous_year = datetime.now().year - 1
+@app.route("/")
+def index():
+    if lm.get_current_user() != 'no_login':
+        return redirect('/homepage')
     else:
-        previous_year = current_year
-
-    try:
-        filtered_data = data[(data['date'].dt.month == current_month) &
-                             (data['date'].dt.year == current_year) &
-                             (data['custom_category'] != 'Payment')]
-        spend = filtered_data['amount'].sum()
-
-        filtered_data = data[(data['date'].dt.month == previous_month) &
-                             (data['date'].dt.year == previous_year) &
-                             (data['custom_category'] != 'Payment') &
-                             (data["description"].apply(lambda x: 'payment' not in x.lower()))]
-        previous_spend = filtered_data['amount'].sum()
-    except AttributeError:
-        spend = 0
-        previous_spend = 0
-
-    return render_template("homepage.html",
-                           username=username, spend="$" + str(round(spend, 2)), curr_month=current_month,
-                           curr_year=current_year, prev_spend="$" + str(round(previous_spend, 2)),
-                           prev_month=previous_month, prev_year=previous_year)
+        return redirect('/login')
 
 
-@server.route("/link_to_dash")
-@login_required
-def render_dashboard():
-    return redirect('/dashboard')
-
-
-@server.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
     # Forget any user_id
@@ -112,14 +72,55 @@ def login():
         lm.store_current_user(session["user_id"])
 
         # Redirect user to home page
-        return redirect("/")
+        return redirect("/homepage")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
 
 
-@server.route("/logout")
+@app.route("/link_to_dash")
+@login_required
+def render_dashboard():
+    return redirect('/dashboard/')
+
+
+@app.route("/homepage")
+@login_required
+def homepage():
+    username = lm.get_current_user()
+    data, _, _, _ = gen_dataframe(curs, username)
+    current_month = datetime.now().month
+    current_year = datetime.now().year
+
+    previous_month = (datetime.utcnow().replace(day=1) - timedelta(days=1)).month
+    if previous_month == 12:
+        previous_year = datetime.now().year - 1
+    else:
+        previous_year = current_year
+
+    try:
+        filtered_data = data[(data['date'].dt.month == current_month) &
+                             (data['date'].dt.year == current_year) &
+                             (data['custom_category'] != 'Payment')]
+        spend = filtered_data['amount'].sum()
+
+        filtered_data = data[(data['date'].dt.month == previous_month) &
+                             (data['date'].dt.year == previous_year) &
+                             (data['custom_category'] != 'Payment') &
+                             (data["description"].apply(lambda x: 'payment' not in x.lower()))]
+        previous_spend = filtered_data['amount'].sum()
+    except AttributeError:
+        spend = 0
+        previous_spend = 0
+
+    return render_template("homepage.html",
+                           username=username, spend="$" + str(round(spend, 2)), curr_month=current_month,
+                           curr_year=current_year, prev_spend="$" + str(round(previous_spend, 2)),
+                           prev_month=previous_month, prev_year=previous_year)
+
+
+@app.route("/logout")
 @login_required
 def logout():
     """Log user out"""
@@ -132,18 +133,14 @@ def logout():
     return redirect("/")
 
 
-@server.route("/profile")
+@app.route("/profile")
 @login_required
 def user_profile():
-    # Forget any user_id
-    session.clear()
-
-    lm.store_current_user('')
-    # Redirect user to login form
-    return redirect("/")
+    # to update
+    return redirect("/homepage")
 
 
-@server.route('/upload', methods=['GET', 'POST'])
+@app.route('/upload', methods=['GET', 'POST'])
 @login_required
 def upload_file():
     if request.method == 'POST':
@@ -167,8 +164,8 @@ def upload_file():
                 if file.filename != official_filename:
                     file.filename = official_filename
                 print(file.filename + ' = ' + official_filename)
-                file.save(os.path.join(server.config['UPLOAD_FOLDER'], official_filename))
-                session['uploaded_data_file_path'] = os.path.join(server.config['UPLOAD_FOLDER'], official_filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], official_filename))
+                session['uploaded_data_file_path'] = os.path.join(app.config['UPLOAD_FOLDER'], official_filename)
                 try:
                     read_file_to_db(conn, curs, session.get('uploaded_data_file_path', None), session.get("user_id"))
                 except sqlite3.OperationalError:
@@ -183,7 +180,7 @@ def upload_file():
         return render_template('upload.html')
 
 
-@server.route("/uploaded", methods=["POST"])
+@app.route("/uploaded", methods=["POST"])
 @login_required
 def uploaded_file():
     """Return to stock quote page."""
@@ -191,7 +188,7 @@ def uploaded_file():
         return render_template("uploaded.html")
 
 
-@server.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
     # User reached route via POST (as by submitting a form via POST)
@@ -221,6 +218,10 @@ def register():
             flash_n_print('Passwords must match')
             return redirect('register')
 
+        elif not request.form.get("annualIncome"):
+            flash_n_print('Please enter an annual income!')
+            return redirect('register')
+
         # check password strength
         elif request.form.get("password"):
             count = 0
@@ -236,10 +237,17 @@ def register():
         # Hash password
         pw_hash = generate_password_hash(request.form.get("password"))
 
+        # Get income
+        annual_income = request.form.get("annualIncome")
+        if not request.form.get("sideIncome"):
+            side_income = 0
+        else:
+            side_income = request.form.get("sideIncome")
+
         # Insert user information into users table with initial cash value of 10000
         curs.execute(
-            "INSERT INTO users (username, hash) VALUES(?, ?)",
-            (str(request.form.get("username")), pw_hash)
+            "INSERT INTO users (username, hash, annual_income, side_income) VALUES(?, ?, ?, ?)",
+            (str(request.form.get("username")), pw_hash, annual_income, side_income)
         )
         conn.commit()
         # Notify that registration is complete!

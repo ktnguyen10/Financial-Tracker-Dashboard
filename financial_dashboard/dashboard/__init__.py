@@ -10,26 +10,28 @@ from helpers import login_required
 from financial_dashboard.dashboard.data_cleanup import gen_dataframe, plot_sankey
 
 main_data = pd.DataFrame
+income_data = pd.DataFrame
 months_dict = {month: index for index, month in enumerate(calendar.month_name) if month}
 years_list = [i for i in range(2022, 2025)]
 
 
 def protected_dashviews(dashapp):
     for view_function in dashapp.server.view_functions:
-        if view_function.startswith(dashapp.config['routes_pathname_prefix']):
+        if view_function.startswith(dashapp.config['url_base_pathname']):
             dashapp.server.view_functions[view_function] = login_required(dashapp.server.view_functions[view_function])
 
 
 def register_dashapp(flask_app, curs):
-    global main_data
+    global main_data, income_data
     username = lm.get_current_user()
 
     # Create Plotly Dash dashboard
-    app_dash = Dash(server=flask_app, external_stylesheets=[dbc.themes.BOOTSTRAP],
-                    routes_pathname_prefix='/dashboard/')
+    app_dash = Dash(__name__, server=flask_app, external_stylesheets=[dbc.themes.BOOTSTRAP],
+                    url_base_pathname='/dashboard/')
     # Get data
-    data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
+    data, income, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
     main_data = data
+    income_data = income
 
     user_list = [x for x in list(data['user'].unique()) if isinstance(x, str)]
     user_list.append('all')
@@ -143,7 +145,7 @@ def register_dashapp(flask_app, curs):
 
     init_callbacks(app_dash, curs)
 
-    return app_dash.server
+    return app_dash
 
 
 def init_callbacks(dashapp, curs):
@@ -154,10 +156,11 @@ def init_callbacks(dashapp, curs):
         Input('refresh_data', 'n_clicks')
     )
     def refresh_data(n):
-        global main_data
+        global main_data, income_data
         username = lm.get_current_user()
-        data, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
+        data, income, overall_pie_user, overall_pie_cat = gen_dataframe(curs, username)
         main_data = data
+        income_data = income
 
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S"), overall_pie_user, overall_pie_cat
 
@@ -171,11 +174,12 @@ def init_callbacks(dashapp, curs):
          Input('user_choice', 'value')]
     )
     def category_statistics(selected_cat, selected_year, selected_user):
-        global main_data
+        global main_data, income_data
         data = main_data
+        income = income_data
 
         # Sankey
-        annual_breakdown_sankey = plot_sankey(data, selected_year)
+        annual_breakdown_sankey = plot_sankey(data, income, selected_year)
 
         data['month'] = data['date'].dt.month
         data['month_name'] = data['month'].apply(lambda m: calendar.month_abbr[m])

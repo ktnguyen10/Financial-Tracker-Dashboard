@@ -1,6 +1,4 @@
-from financial_dashboard import init_app
-
-app = init_app()
+from financial_dashboard import app
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8083, debug=True, load_dotenv=True)
+    app.run(host="0.0.0.0", port=8083, threaded=True, debug=True, use_reloader=False, load_dotenv=True)

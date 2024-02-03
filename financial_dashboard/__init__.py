@@ -1,16 +1,19 @@
+from financial_dashboard.dashboard import register_dashapp
 from flask import Flask
+import os
 
 
-def init_app():
-    app = Flask(__name__, instance_relative_config=False)
+UPLOAD_FOLDER = os.path.join('financial_dashboard/static', 'uploads')
 
-    with app.app_context():
-        from financial_dashboard import routes
+app = Flask(__name__)
+app.config.from_object(__name__)
 
-        # Import Dash app
-        from financial_dashboard.dashboard import register_dashapp
-        print(routes.curs)
+app.debug = True
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config["SESSION_TYPE"] = "filesystem"
+app.config['SECRET_KEY'] = 'abc123'
 
-        app = register_dashapp(app, routes.curs)
+from financial_dashboard.routes import *
 
-        return app
+register_dashapp(app, routes.curs)
+
