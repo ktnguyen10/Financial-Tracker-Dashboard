@@ -152,7 +152,7 @@ def upload_file():
         # List of files to display on webpage
         filenames = []
         for file in files:
-            print(file.filename)
+            # print(file.filename)
             if file.filename == '':
                 flash_n_print('No files')
                 return render_template('upload.html')
@@ -163,7 +163,7 @@ def upload_file():
                 # Rename the file in case of spaces
                 if file.filename != official_filename:
                     file.filename = official_filename
-                print(file.filename + ' = ' + official_filename)
+                # print(file.filename + ' = ' + official_filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], official_filename))
                 session['uploaded_data_file_path'] = os.path.join(app.config['UPLOAD_FOLDER'], official_filename)
                 try:

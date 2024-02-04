@@ -46,7 +46,7 @@ def gen_dataframe(curs, username):
         return df, df_income, overall_pie_user, overall_pie_cat
     else:
         df['date'] = df['transaction_date'].apply(lambda x: datetime.strptime(x, "%Y-%m-%d %H:%M:%S"))
-        df['amount'] = df['amount'].apply(lambda x: -x)
+        df['amount'] = df['amount'].apply(lambda x: round(-x, 2)) # Convert negative charges to positive numbers
         df['category'] = df['category'].apply(lambda x: 'Shopping' if x == 'Normal' else x)
         df['user'] = df['user'].apply(lambda x: str(x).strip())
 
