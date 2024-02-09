@@ -1,5 +1,5 @@
 import sqlite3
-from gen_database import dict_factory
+from development_scripts.gen_database import dict_factory
 
 
 conn = sqlite3.connect('../main.db', check_same_thread=False)

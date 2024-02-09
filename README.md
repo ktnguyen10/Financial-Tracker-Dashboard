@@ -46,12 +46,12 @@ which is provided by user uploaded data. Data is queried from the
 transactions table and users table using SQL and passed on to the 
 Dash app. A series of pie charts, bar charts, a Sankey diagram, 
 and tables can be used to observe annual, monthly, and overall spending
-broken down by person and category. 
+broken down by person and category. Each plot has valuable information 
+that can be extracted depending on a user's query, i.e. how much is X
+spending on groceries throughout the year compared to me?
 
 At the bottom of the dashboard is a series of tables for those 
-who prefer a tabular format. Each plot has valuable information 
-that can be extracted.
-
+who prefer a tabular format.
 
 ## Program File Specifics
 
@@ -74,19 +74,19 @@ The upload feature supports multiple files at once through the use
 of a loop.
 
 The files being uploaded must be in a particular format and have the following columns:
-* Transaction Date: date of the transaction occurence
-* Post Date: if credit card, date that the transaction was confirmed
-* Description
-* Category: category as defined by the bank
-* Amount
-* Custom Category: user defined categories, if applicable
-* User: user defined, person who performed the purchase
-* Custom Group: user defined groups, if applicable
+* Transaction Date (datetime): date of the transaction occurence
+* Post Date (datetime): if credit card, date that the transaction was confirmed
+* Description (str): descriptive string of transaction
+* Category (str): category as defined by the bank
+* Amount (float): numerical amount of US Dollars for the transaction
+* Custom Category (str): user defined categories, if applicable
+* User (str): user defined, person who performed the purchase
+* Custom Group (str): user defined groups, if applicable
 
 Three additional columns are added to the table during upload:
-* ID: incremental identification number of data row
-* User ID: login username of current user
-* Date: Transaction date without the time elements
+* ID (int): incremental identification number of data row
+* User ID (str): login username of current user
+* Date (datetime): Transaction date without the time elements
 
 #### Future Release to include dynamic column matching to avoid having to preprocess data before uploading.
 

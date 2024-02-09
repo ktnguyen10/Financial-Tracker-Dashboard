@@ -1,4 +1,4 @@
-import login_manager as lm
+from login_manager import LoginManager
 from functools import wraps
 from flask import redirect, session
 
@@ -11,6 +11,7 @@ def login_required(f):
     """
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        lm = LoginManager()
         current_user = lm.get_current_user()
         if session.get("user_id") is None:
             return redirect("/login")

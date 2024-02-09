@@ -1,4 +1,4 @@
-from financial_dashboard.dashboard import register_dashapp
+from financial_dashboard.dashboard import DashBoard
 from flask import Flask
 import os
 
@@ -15,5 +15,6 @@ app.config['SECRET_KEY'] = 'abc123'
 
 from financial_dashboard.routes import *
 
-register_dashapp(app, routes.curs)
+db = DashBoard(app, routes.curs)
+db.register_dashapp()
 

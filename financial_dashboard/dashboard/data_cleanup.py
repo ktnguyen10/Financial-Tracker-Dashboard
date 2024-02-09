@@ -85,31 +85,6 @@ def gen_dataframe(curs, username):
         return df, df_income, overall_pie_user, overall_pie_cat
 
 
-def preprocess_df_for_db(df, user_id):
-    trans_table_cols = ['user_id', 'transaction_date', 'post_date', 'description',
-                        'category', 'amount', 'custom_category', 'user', 'custom_group', 'date']
-    desired_dtypes = ['string', 'datetime64[ns]', 'datetime64[ns]', 'string', 'category',
-                      'float64', 'category', 'string', 'string', 'datetime64[ns]']
-
-    if len(df.columns) != len(trans_table_cols) - 2:
-        raise IndexError("Number of columns is not the proper amount.")
-
-    # add a user column
-    df['user_id'] = user_id
-    df.insert(0, 'user_id', df.pop('user_id'))
-    print(df.head())
-
-    df['date'] = df['Transaction Date'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
-    df = df.rename(mapper=dict(zip(df.columns, trans_table_cols)), axis=1)
-
-    # Check data types
-    for i, c in enumerate(df.columns):
-        if df[c].dtype != desired_dtypes[i]:
-            df[c] = df[c].astype(desired_dtypes[i])
-
-    return df
-
-
 def plot_sankey(df, df_income, year):
     df = df[(df['date'].dt.year == year) & (df['custom_category'] != 'Payment')]
 

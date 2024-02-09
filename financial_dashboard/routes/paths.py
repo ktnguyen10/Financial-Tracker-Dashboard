@@ -1,17 +1,18 @@
 import os
 import string
 import sqlite3
-import login_manager as lm
-from datetime import datetime, timedelta
-from flask import flash, redirect, render_template, request, session
-from flask_session import Session
-from werkzeug.security import check_password_hash, generate_password_hash
-from werkzeug.utils import secure_filename
+from login_manager import LoginManager
 from helpers import login_required
-from financial_dashboard.routes import curs, conn
-from gen_database import read_file_to_db
-from financial_dashboard.dashboard.data_cleanup import gen_dataframe
+from datetime import datetime, timedelta
+from werkzeug.utils import secure_filename
+from flask_session import Session
 from financial_dashboard import app
+from financial_dashboard.routes import curs, conn
+from financial_dashboard.database import Database
+from financial_dashboard.dashboard.data_cleanup import gen_dataframe
+from flask import flash, redirect, render_template, request, session
+from werkzeug.security import check_password_hash, generate_password_hash
+
 
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
 Session(app)
@@ -29,6 +30,7 @@ def flash_n_print(message):
 
 @app.route("/")
 def index():
+    lm = LoginManager()
     if lm.get_current_user() != 'no_login':
         return redirect('/homepage')
     else:
@@ -69,6 +71,7 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["username"]
+        lm = LoginManager()
         lm.store_current_user(session["user_id"])
 
         # Redirect user to home page
@@ -88,6 +91,7 @@ def render_dashboard():
 @app.route("/homepage")
 @login_required
 def homepage():
+    lm = LoginManager()
     username = lm.get_current_user()
     data, _, _, _ = gen_dataframe(curs, username)
     current_month = datetime.now().month
@@ -128,6 +132,7 @@ def logout():
     # Forget any user_id
     session.clear()
 
+    lm = LoginManager()
     lm.store_current_user('')
     # Redirect user to login form
     return redirect("/")
@@ -167,7 +172,8 @@ def upload_file():
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], official_filename))
                 session['uploaded_data_file_path'] = os.path.join(app.config['UPLOAD_FOLDER'], official_filename)
                 try:
-                    read_file_to_db(conn, curs, session.get('uploaded_data_file_path', None), session.get("user_id"))
+                    db = Database()
+                    db.read_file_to_db(session.get('uploaded_data_file_path', None), session.get("user_id"))
                 except sqlite3.OperationalError:
                     flash_n_print('Failed to upload data to the database. Check column and type compatibility!')
                 except:

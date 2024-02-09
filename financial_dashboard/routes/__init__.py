@@ -1,4 +1,5 @@
-from gen_database import init_database
+from financial_dashboard.database import Database
 
-conn, curs = init_database()
+db = Database()
+conn, curs = db.new_database()
 __all__ = ['paths']

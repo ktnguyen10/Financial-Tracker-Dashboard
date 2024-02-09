@@ -5,7 +5,7 @@ from financial_dashboard.dashboard.data_cleanup import preprocess_df_for_db
 
 
 def init_database():
-    conn = sqlite3.connect('main.db', check_same_thread=False)
+    conn = sqlite3.connect('../main.db', check_same_thread=False)
     conn.row_factory = dict_factory
     curs = conn.cursor()
     curs.execute(
