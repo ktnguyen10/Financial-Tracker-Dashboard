@@ -36,7 +36,7 @@ class DashBoard:
         user_list = [x for x in list(data['user'].unique()) if isinstance(x, str)]
         user_list.append('all')
 
-        layout = dbc.Container([
+        layout = html.Div([
             dcc.Location(id='url', refresh=True),
 
             dcc.Store(id='table_memory'),
@@ -74,17 +74,17 @@ class DashBoard:
             dbc.Row([
                 dbc.Col([
                     dcc.Graph(id='category-by-month-bar', figure={})
-                ], width=9),
+                ], width=6),
                 dbc.Col([
-                    dash_table.DataTable(id='category-statistics')
-                ], width=3),
+                    dcc.Graph(id='annual-breakdown-sankey', figure={})
+                ], width=6)
             ], align='center'),
 
             dbc.Row([
                 dbc.Col([
-                    dcc.Graph(id='annual-breakdown-sankey', figure={})
-                ], width=12)
-            ]),
+                    dash_table.DataTable(id='category-statistics')
+                ], width=3),
+            ], align='center'),
 
             html.Br(),
             html.H2("Monthly Spending Summary", style={'textAlign': 'center'}),
@@ -141,7 +141,7 @@ class DashBoard:
 
             html.Div(id='last_update', style={'display': 'none'}),
             html.Div(id='return_call', style={'display': 'none'})
-        ])
+        ], style={'margin': '10px 20px'})
         return layout
 
     def register_dashapp(self):
