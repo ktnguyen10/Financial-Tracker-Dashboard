@@ -9,7 +9,9 @@
 
    {% for f in filenames: %}
       <tr>
-         <td>File uploaded: {{ f }}</td>
+         <td>
+            <span>File uploaded: {{ f }}</span><br/>
+         </td>
       </tr>
    {% endfor %}
 {% endblock %}

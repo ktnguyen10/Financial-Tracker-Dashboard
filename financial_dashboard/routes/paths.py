@@ -9,6 +9,7 @@ from flask_session import Session
 from financial_dashboard import app
 from financial_dashboard.routes import curs, conn
 from financial_dashboard.database import Database
+from financial_dashboard.budget import Budget
 from financial_dashboard.dashboard.data_cleanup import gen_dataframe
 from flask import flash, redirect, render_template, request, session
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -142,7 +143,15 @@ def logout():
 @login_required
 def user_profile():
     # to update
-    return redirect("/homepage")
+    return render_template("/profile")
+
+
+@app.route("/budget")
+@login_required
+def see_budget():
+    # to update
+    budget = Budget()
+    return render_template("/budget", budget=budget)
 
 
 @app.route('/upload', methods=['GET', 'POST'])
