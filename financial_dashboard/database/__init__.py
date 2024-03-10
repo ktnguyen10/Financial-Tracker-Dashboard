@@ -22,6 +22,10 @@ class Database:
             "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
             "username TEXT NOT NULL, hash TEXT NOT NULL, annual_income NUMERIC NOT NULL, side_income NUMERIC NOT NULL) "
         )
+        self.curs.execute(
+            "CREATE TABLE IF NOT EXISTS budgets (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
+            "username TEXT NOT NULL, category TEXT NOT NULL, amount NUMERIC NOT NULL) "
+        )
         self.conn.commit()
 
         return self.conn, self.curs

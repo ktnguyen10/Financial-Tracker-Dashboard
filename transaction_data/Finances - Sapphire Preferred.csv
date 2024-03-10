@@ -1,88 +1,201 @@
 Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Group
+12/30/23,12/31/23,UBER   EATS,Food & Drink,-19.32,Food,Both,NYC
+12/29/23,12/29/23,Payment Thank You Bill Pa,,524.74,Payment,,
+12/26/23,12/28/23,MOTTO NEW YORK CITY TIME,Travel,-137.68,Travel,Both,NYC
+12/25/23,12/26/23,BEST BAGEL AND COFFEE,Food & Drink,-14.8,Food,Both,NYC
+12/25/23,12/26/23,UBER   EATS,Food & Drink,-47.02,Food,Both,NYC
+12/24/23,12/25/23,BEST BAGEL AND COFFEE,Food & Drink,-14.8,Food,Both,NYC
+12/23/23,12/24/23,BEST BAGEL AND COFFEE,Food & Drink,-21.88,Food,Both,NYC
+12/22/23,12/24/23,TST* LA PECORA BIANCA 8,Food & Drink,-74.86,Food,Both,NYC
+12/20/23,12/21/23,Zodos Bowling &amp; Beyond,Food & Drink,-44.76,Food,Kevin,
+12/15/23,12/17/23,MCDONALD'S (AMK),Food & Drink,-28.47,Food,Both,
+12/13/23,12/14/23,Grab* 964c57885671d776,Personal,-15.7,Food,Mon,
+12/12/23,12/13/23,Grab* aab14bd8bf07c246,Personal,-15.67,Food,Mon,
+12/12/23,12/12/23,Grab* ba1091061d249439,Personal,-11.19,Food,Mon,
+12/11/23,12/12/23,KOPITIAM@AMKH,Food & Drink,-19.28,Food,Mon,
+12/8/23,12/10/23,McDonalds 930027,Food & Drink,-8.42,Food,Mon,
+12/8/23,12/10/23,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
+12/7/23,12/8/23,KOPITIAM@AMKH,Food & Drink,-21.51,Food,Mon,
+12/6/23,12/7/23,Grab* b75dc04f6a95682f,Personal,-35.17,Food,Mon,
+12/5/23,12/5/23,Grab* 92f94ce2e01e8653,Personal,-15.77,Food,Mon,
+12/4/23,12/4/23,Payment Thank You Bill Pa,,2135.71,Payment,,
+12/3/23,12/5/23,TOAST BOX - AMK HUB,Food & Drink,-2.25,Food,Mon,
+12/3/23,12/5/23,MCDONALD'S (AMK),Food & Drink,-8.93,Food,Both,
+12/3/23,12/4/23,Grab* bd1dda55414ed078,Personal,-20.26,Food,Mon,
+12/3/23,12/3/23,Grab* 897a17199c8fe1e8,Personal,-7.5,Food,Mon,
+12/3/23,12/3/23,Grab* a7f9585bb36916da,Personal,-21.76,Food,Mon,
+12/2/23,12/3/23,PARIS BAGUETTE - AMK HUB,Food & Drink,-17.41,Food,Mon,
+12/2/23,12/3/23,MOS BURGER-AMK HUB,Food & Drink,-26.41,Food,Both,
+11/29/23,12/1/23,STARBUCKS-SC-MOBILE AP,Food & Drink,-7.52,Food,Kevin,
+11/29/23,11/30/23,STARBUCKS@TANGLIN3(TG),Food & Drink,-7.52,Food,Mon,
+11/29/23,11/30/23,SG HAWKER - TANGLIN MALL,Food & Drink,-4.89,Food,Mon,
+11/27/23,11/27/23,Grab* 844074ff7632f854,Personal,-15.69,Food,Mon,
+11/26/23,11/28/23,COFFEEBOT SG,Food & Drink,-2.62,Food,Mon,
+11/26/23,11/27/23,Grab* 80c0f2c424892acb,Personal,-47.82,Food,Mon,
+11/24/23,11/26/23,Grab* A-5N76PSWWWHH7,Food & Drink,-14.94,Food,Mon,
+11/23/23,11/24/23,ABBA OL11 PTE LTD,Food & Drink,-28.26,Food,Mon,
+11/22/23,11/23/23,MOS BURGER-AMK HUB,Food & Drink,-6.07,Food,Mon,
+11/20/23,11/20/23,Grab* bdd34e8f0800f37a,Personal,-15.65,Food,Mon,
+11/19/23,11/19/23,Grab* a899a391896b8728,Personal,-15.65,Food,Mon,
+11/18/23,11/19/23,Grab* A-5MESW55GWGBP,Food & Drink,-15.72,Food,Mon,
+11/17/23,11/19/23,Gopay-Gojek,Travel,-10.26,Transport,Kevin,
+11/16/23,11/17/23,WONDERFUL BAPSANG - THOMS,Food & Drink,-40.43,Food,Both,
+11/16/23,11/17/23,SG HAWKER - TANGLIN MALL,Food & Drink,-8.17,Food,Mon,
+11/15/23,11/16/23,Grab* 81a7f687d00ea674,Personal,-20.03,Food,Mon,
+11/14/23,11/15/23,Grab* A-5LVXBBBGWF85,Food & Drink,-27.82,Food,Mon,
+11/14/23,11/15/23,MALAYSIA BOLEH AMK HUB,Food & Drink,-1.99,Food,Mon,
+11/14/23,11/15/23,Klook Travel Technology P,Travel,-4.29,Travel,Kevin,
+11/14/23,11/15/23,Grab Subscription* v5-7c4,Travel,-4.41,Transport,Mon,
+11/14/23,11/15/23,MALAYSIA BOLEH AMK HUB,Food & Drink,-3.46,Food,Mon,
+11/14/23,11/15/23,NAM KEE PAU ANG MO KIO HU,Food & Drink,-3.46,Food,Mon,
+11/13/23,11/15/23,HAI DI LAO-313 ORCHARD,Food & Drink,-92.3,Food,Both,
+11/12/23,11/12/23,Grab* a6a5e58528ea0b84,Personal,-16.93,Food,Mon,
+11/10/23,11/15/23,BUS/MRT 346170547,Travel,-1.56,Transport,Mon,
+11/10/23,11/12/23,SG HAWKER - TANGLIN MALL,Food & Drink,-3.91,Food,Mon,
+11/9/23,11/12/23,THE COFFEE BEAN,Food & Drink,-8.35,Food,Mon,
+11/9/23,11/12/23,THE COFFEE BEAN,Food & Drink,-11.09,Food,Mon,
+11/9/23,11/10/23,PARIS BAGUETTE - AMK HUB,Food & Drink,-9.24,Food,Mon,
+11/9/23,11/10/23,GetGo,Travel,-6.22,Transport,Kevin,
+11/9/23,11/10/23,GetGo,Travel,-8.35,Transport,Kevin,
+11/8/23,11/9/23,MOS BURGER-AMK HUB,Food & Drink,-26.52,Food,Both,
+11/8/23,11/9/23,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
+11/5/23,11/6/23,GetGo,Travel,-10.72,Transport,Both,
+11/4/23,11/5/23,LHR T2A WDF MAIN,Shopping,-131.86,Shopping,Mon,Mon London
+11/3/23,11/5/23,T K MAXX,Shopping,-49.14,Shopping,Mon ,Mon London
+11/3/23,11/5/23,GetGo,Travel,-20.79,Transport,Both,
+11/2/23,11/3/23,WELCOME BREAK LEIC FOREST,Groceries,-7.06,Groceries,Mon,Mon London
+11/2/23,11/2/23,Payment Thank You Bill Pa,,1200,Payment,,
+10/31/23,11/2/23,TFL TRAVEL CH,Travel,-8.54,Transport,Mon,Mon London
+10/31/23,11/1/23,RAWR BEAUTY ENFIELD,Personal,-8.52,Misc,Mon,Mon London
+10/31/23,11/1/23,BANG BANG TIGER HILL,Food & Drink,-6.94,Food,Mon,Mon London
+10/31/23,11/1/23,CL *Chase Travel,Travel,-1261.32,Travel,Both,NYC
+10/31/23,10/31/23,ANNUAL HOTEL CREDIT,Fees & Adjustments,50,Travel Credit,Both,NYC
+10/30/23,10/31/23,TFL TRAVEL CH,Travel,-12.79,Transport,Mon,Mon London
+10/30/23,10/31/23,Hanger shop,Shopping,-17.64,Shopping,Mon,Mon London
+10/30/23,10/31/23,GONG CHA GOODGE ST,Food & Drink,-7.18,Food,Mon,Mon London
+10/27/23,10/29/23,TFL TRAVEL CH,Travel,-2.68,Transport,Mon,Mon London
+10/26/23,10/29/23,LLL ATHLETICA UK LTD,Shopping,-160.83,Shopping,Mon,Mon London
+10/26/23,10/27/23,TFL TRAVEL CH,Travel,-8.5,Transport,Mon,Mon London
+10/26/23,10/27/23,DECIEM,Shopping,-42.4,Shopping,Mon,Mon London
+10/26/23,10/27/23,XIAN BIANGBIANG NOODLE,Food & Drink,-20.74,Food,Mon,Mon London
+10/25/23,10/26/23,TESCO STORES 2467,Groceries,-6.45,Groceries,Mon,Mon London
+10/24/23,10/25/23,TOWNHOUSE,Health & Wellness,-69.89,Health,Mon,Mon London
+10/24/23,10/25/23,TFL TRAVEL CH,Travel,-10.57,Transport,Mon,Mon London
+10/23/23,10/24/23,TFL TRAVEL CH,Travel,-12.51,Transport,Mon,Mon London
+10/23/23,10/23/23,Payment Thank You Bill Pa,,500,Payment,,
+10/22/23,10/23/23,TFL TRAVEL CH,Travel,-4.26,Transport,Mon,Mon London
+10/22/23,10/23/23,Zettle_*Attendant,Food & Drink,-5.97,Food,Mon,Mon London
+10/22/23,10/23/23,SANJUGO SHOREDITCH,Food & Drink,-15.95,Food,Mon,Mon London
+10/22/23,10/23/23,Katsute 100,Food & Drink,-5.48,Food,Mon,Mon London
+10/22/23,10/23/23,Katsute 100,Food & Drink,-5.3,Food,Mon,Mon London
+10/20/23,10/22/23,TFL TRAVEL CH,Travel,-9.62,Transport,Mon,Mon London
+10/20/23,10/22/23,STATION FOOD AND WINE,Groceries,-12.19,Food,Mon,Mon London
+10/19/23,10/20/23,N.PEAL Bicester Village,Shopping,-108.85,Shopping,Mon,Mon London
+10/19/23,10/20/23,Calvin Klein,Shopping,-34.21,Shopping,Mon,Mon London
+10/19/23,10/20/23,lululemon athletica uk,Shopping,-168.11,Shopping,Mon,Mon London
+10/19/23,10/20/23,SP SELF-PORTRAIT,Shopping,-247.39,Shopping,Mon,Mon London
+10/18/23,10/19/23,Calvin Klein Stores UK,Shopping,-57.45,Shopping,Mon,Mon London
+10/18/23,10/19/23,TFL TRAVEL CH,Travel,-9.71,Transport,Mon,Mon London
+10/18/23,10/19/23,Brandy Melville Covent Ga,Shopping,-42.78,Shopping,Mon,Mon London
+10/14/23,10/15/23,TFL TRAVEL CH,Travel,-12.11,Transport,Mon,Mon London
+10/14/23,10/15/23,FATBOY S THE BURGER BAR,Food & Drink,-107.8,Food,Kevin,
+10/14/23,10/15/23,LULULEMON ATHLETICA UK LT,Shopping,-37.42,Shopping,Mon,Mon London
+10/14/23,10/15/23,WWW.FLOWLDN.CO.UK,Personal,-36.68,Health,Mon,Mon London
+10/14/23,10/15/23,Zettle_*CROSSTOWN,Food & Drink,-12.84,Food,Mon,Mon London
+10/13/23,10/15/23,TESCO STORES 2467,Groceries,-2.34,Groceries,Mon,Mon London
+10/11/23,10/12/23,ZETTLE_*PROXY,Shopping,-184.43,Shopping,Mon,Mon London
+10/11/23,10/12/23,MARKS&amp;SPENCER PLC,Groceries,-1.72,Food,Mon,Mon London
+10/11/23,10/12/23,TIAN TIAN MARKET,Groceries,-7.33,Groceries,Mon,Mon London
+10/11/23,10/12/23,TFL TRAVEL CH,Travel,-14.19,Transport,Mon,Mon London
+10/11/23,10/12/23,Katsute 100,Food & Drink,-15.55,Food,Mon,Mon London
+10/10/23,10/11/23,WELCOME BREAK-CORLEY STAR,Groceries,-5.57,Groceries,Mon,Mon London
+10/9/23,10/9/23,Payment Thank You Bill Pa,,500,Payment,,
+10/9/23,10/9/23,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
+10/7/23,10/8/23,MARKS&amp;SPENCER PLC SACA,Groceries,-4.17,Groceries,Mon,Mon London
 10/5/23,10/6/23,TEN - NOTTING HILL,Personal,-66.99,Health,Mon,Mon London
-10/2/23,10/4/23,SINGAPOREAI 2446852612,Travel,-5.6,Travel,Mon,Mon London
-9/30/23,10/4/23,BUS/MRT 327314669,Travel,-1.24,Transport,Mon,
-9/29/23,10/3/23,BUS/MRT 326857567,Travel,-4.69,Transport,Mon,
 10/3/23,10/3/23,Payment Thank You Bill Pa,,1658.64,Payment,,
+10/2/23,10/4/23,SINGAPOREAI 2446852612,Travel,-5.6,Travel,Mon,Mon London
 10/1/23,10/3/23,DIN TAI FUNG-JUNCTION 8,Food & Drink,-70.3,Food,Both,
-9/28/23,10/3/23,BUS/MRT 326353863,Travel,-1.55,Transport,Mon,
 10/1/23,10/2/23,JOE AND DOUGH,Food & Drink,-5.15,Food,Mon,
-9/28/23,10/2/23,Klarna* Other Stories UK,Shopping,-60.78,Shopping,Mon,
 10/1/23,10/2/23,SINGAPOREAIR6182446850861,Travel,-63.73,Travel,Mon,Mon London
+9/30/23,10/4/23,BUS/MRT 327314669,Travel,-1.24,Transport,Mon,
 9/30/23,10/1/23,SJ CLINIC &amp; SURGERY (ORC),Health & Wellness,-341.37,Health,Mon,
-9/26/23,10/1/23,BUS/MRT 325425369,Travel,-4.51,Transport,Mon,
+9/29/23,10/3/23,BUS/MRT 326857567,Travel,-4.69,Transport,Mon,
+9/29/23,9/29/23,CLASSPASS* MONTHLY,Shopping,-6.11,Health,Mon,
+9/28/23,10/3/23,BUS/MRT 326353863,Travel,-1.55,Transport,Mon,
+9/28/23,10/2/23,Klarna* Other Stories UK,Shopping,-60.78,Shopping,Mon,
 9/28/23,10/1/23,HAI DI LAO - WISMA ATRIA,Food & Drink,-78.15,Food,Both,
 9/28/23,9/29/23,CULTBEAUTY GBP,Shopping,-118.02,Shopping,Mon,
-9/25/23,9/29/23,BUS/MRT 325013243,Travel,-2.84,Transport,Mon,
-9/27/23,9/29/23,THE COFFEE BEAN,Food & Drink,-7.32,Food,Mon,
-9/29/23,9/29/23,CLASSPASS* MONTHLY,Shopping,-6.11,Health,Mon,
 9/28/23,9/29/23,GOKOKU JAPANESE BAKERY -,Food & Drink,-7.68,Food,Both,
-9/24/23,9/28/23,BUS/MRT 324444346,Travel,-1.56,Transport,Mon,
+9/27/23,9/29/23,THE COFFEE BEAN,Food & Drink,-7.32,Food,Mon,
 9/27/23,9/28/23,SWEE HENG BAKERY-CR03,Food & Drink,-4.39,Food,Both,
+9/26/23,10/1/23,BUS/MRT 325425369,Travel,-4.51,Transport,Mon,
 9/26/23,9/27/23,XIAMENAIR 0000000HXDBHR,Travel,-233.54,Travel,Mon,Xiamen
-9/23/23,9/27/23,BUS/MRT 324120339,Travel,-2.57,Transport,Mon,
 9/26/23,9/27/23,WTRCOLUMBUS-COFFEE-CO,Food & Drink,-5.86,Food,Mon,
 9/26/23,9/27/23,WTRCOLUMBUS-COFFEE-CO,Food & Drink,-15.91,Food,Mon,
 9/26/23,9/27/23,PHORAGE,Food & Drink,-44.24,Food,Mon,
+9/25/23,9/29/23,BUS/MRT 325013243,Travel,-2.84,Transport,Mon,
+9/25/23,9/26/23,MerciMarcelClubStqlub,Food & Drink,-24.85,Food,Mon,
+9/25/23,9/25/23,WWW.YAKUN.COM,Shopping,-6.46,Food,Both,
+9/24/23,9/28/23,BUS/MRT 324444346,Travel,-1.56,Transport,Mon,
 9/24/23,9/26/23,NET*THE COMMUNITY COFFEE,Food & Drink,-5.14,Food,Mon,
 9/24/23,9/26/23,DECATHLON CENTREPOINT,Shopping,-10.86,Health,Kevin,
 9/24/23,9/26/23,Gopay-Gojek,Travel,-6.9,Transport,Both,
-9/25/23,9/26/23,MerciMarcelClubStqlub,Food & Drink,-24.85,Food,Mon,
 9/24/23,9/26/23,THE 1872 CLIPPER TEA CO,Groceries,-4.62,Food,Mon,
+9/23/23,9/27/23,BUS/MRT 324120339,Travel,-2.57,Transport,Mon,
 9/23/23,9/25/23,MCDONALD'S (FR),Food & Drink,-8.81,Food,Both,
-9/25/23,9/25/23,WWW.YAKUN.COM,Shopping,-6.46,Food,Both,
 9/23/23,9/24/23,MICRO BAKERY KITCHEN,Food & Drink,-5.5,Food,Mon,
 9/23/23,9/24/23,COLD STORAGE CLUNY C,Groceries,-10.02,Groceries,Mon,
 9/20/23,9/21/23,CURATE KITCHEN,Food & Drink,-2.57,Food,Mon,
+9/17/23,9/19/23,LOTTE DUTY FREE-T1,Shopping,-294.31,Shopping,Aunty,
+9/17/23,9/19/23,7-ELEVEN - T1 #02-75,Groceries,-4.09,Food,Both,
 9/16/23,9/20/23,BUS/MRT 320879823,Travel,-3.86,Transport,Mon,
 9/16/23,9/19/23,HAI DI LAO - MARINA BAY,Food & Drink,-43.8,Food,Both,
-9/17/23,9/19/23,LOTTE DUTY FREE-T1,Shopping,-294.31,Shopping,Aunty,
 9/16/23,9/19/23,Gopay-Gojek,Travel,-13.96,Transport,Both,
-9/17/23,9/19/23,7-ELEVEN - T1 #02-75,Groceries,-4.09,Food,Both,
 9/16/23,9/19/23,BACHA COFFEE,Food & Drink,-2.57,Food,Both,
 9/16/23,9/17/23,CLINIC CHARGES,Health & Wellness,-99.21,Health,Mon,
 9/15/23,9/17/23,FAIRPRICE XTRA-AMK,Groceries,-16.75,Groceries,Both,
 9/15/23,9/17/23,PARIS BAGUETTE - AMK HUB,Food & Drink,-8.83,Food,Mon,
 9/13/23,9/17/23,BUS/MRT 319423010,Travel,-4.38,Transport,Mon,
-9/11/23,9/15/23,BUS/MRT 318551592,Travel,-2.12,Transport,Mon,
 9/13/23,9/14/23,HUGGS COLLECTIVE THO,Food & Drink,-3.38,Food,Both,
 9/13/23,9/14/23,SONG FA BAK KUT TEH FOOD,Food & Drink,-30.59,Food,Both,
-9/9/23,9/13/23,BUS/MRT 317660109,Travel,-2.43,Transport,Mon,
 9/12/23,9/13/23,XIAMEN AIRLI0000000HV15HQ,Travel,-461.29,Travel,Mon,Xiamen
 9/12/23,9/13/23,PARIS BAGUETTE - AMK HUB,Food & Drink,-14.5,Food,Mon,
-9/8/23,9/12/23,BUS/MRT 317205853,Travel,-2.19,Transport,Mon,
-9/10/23,9/12/23,THE 1872 CLIPPER TEA CO,Groceries,-4.63,Food,Mon,
+9/11/23,9/15/23,BUS/MRT 318551592,Travel,-2.12,Transport,Mon,
 9/11/23,9/12/23,WONDERFUL BAPSANG - THOMS,Food & Drink,-42.24,Food,Mon,
-9/7/23,9/12/23,BUS/MRT 316707624,Travel,-2.67,Transport,Mon,
+9/10/23,9/12/23,THE 1872 CLIPPER TEA CO,Groceries,-4.63,Food,Mon,
+9/9/23,9/13/23,BUS/MRT 317660109,Travel,-2.43,Transport,Mon,
 9/9/23,9/10/23,SANPOUTEI RAMEN - SHAW,Food & Drink,-16.58,Food,Both,
 9/9/23,9/10/23,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
-9/7/23,9/10/23,HAI DI LAO - WISMA ATRIA,Food & Drink,-57.68,Food,Both,
+9/8/23,9/12/23,BUS/MRT 317205853,Travel,-2.19,Transport,Mon,
 9/8/23,9/10/23,The Giant Manatee Pte Ltd,Food & Drink,-24.52,Food,Mon,
-9/4/23,9/8/23,BUS/MRT 315459857,Travel,-3.42,Transport,Mon,
+9/7/23,9/12/23,BUS/MRT 316707624,Travel,-2.67,Transport,Mon,
+9/7/23,9/10/23,HAI DI LAO - WISMA ATRIA,Food & Drink,-57.68,Food,Both,
 9/6/23,9/7/23,BOOST JUICE AMK HUB,Food & Drink,-4.36,Food,Both,
 9/6/23,9/7/23,BIGFISHSMALLFISH,Food & Drink,-7.31,Food,Both,
 9/5/23,9/6/23,BOOST JUICE AMK HUB,Food & Drink,-4.81,Food,Both,
+9/4/23,9/8/23,BUS/MRT 315459857,Travel,-3.42,Transport,Mon,
 9/4/23,9/5/23,LLAO LLAO - WISMA,Food & Drink,-5.2,Food,Mon,
 9/4/23,9/5/23,SJ CLINIC &amp; SURGERY (ORC),Health & Wellness,-72.17,Health,Mon,
 9/1/23,9/1/23,Payment Thank You Bill Pa,,2471.68,Payment,,
 8/30/23,8/31/23,OPN Lab Stud,Health & Wellness,-128.99,Health,Mon,
 8/27/23,8/31/23,BUS/MRT 311823675,Travel,-4.92,Transport,Mon,
-8/25/23,8/29/23,BUS/MRT 311085055,Travel,-3.12,Transport,Mon,
 8/27/23,8/29/23,FR WISMA-DIVINE CHICKEN P,Food & Drink,-18.71,Food,Both,
-8/24/23,8/29/23,BUS/MRT 310651656,Travel,-2.21,Transport,Mon,
 8/27/23,8/28/23,BUSINESS A* BUSINESSAD,Food & Drink,-34.76,Food,Mon,
 8/27/23,8/28/23,SP BURR SILK,Shopping,-131.65,Shopping,Mon,
 8/27/23,8/27/23,MerciMarcelOrchardqlub,Food & Drink,-44.38,Food,Both,
+8/25/23,8/29/23,BUS/MRT 311085055,Travel,-3.12,Transport,Mon,
+8/24/23,8/29/23,BUS/MRT 310651656,Travel,-2.21,Transport,Mon,
 8/23/23,8/27/23,BUS/MRT 309861473,Travel,-3.45,Transport,Mon,
 8/22/23,8/27/23,BUS/MRT 309430302,Travel,-3.66,Transport,Mon,
-8/19/23,8/23/23,BUS/MRT 308227846,Travel,-1.32,Transport,Mon,
 8/22/23,8/23/23,HUGGS COLLECTIVE THO,Food & Drink,-3.76,Food,Mon,
 8/22/23,8/23/23,YAKUN.COM,Food & Drink,-2.14,Food,Mon,
 8/22/23,8/23/23,HOKKAIDO-YA,Food & Drink,-11.87,Food,Mon,
 8/22/23,8/23/23,FAIRPRICE FINEST-THOMSON,Groceries,-0.26,Groceries,Mon,
 8/20/23,8/22/23,HAI DI LAO,Food & Drink,-142.08,Food,Both,
-8/16/23,8/18/23,CARING PHARMACY-KLIA2,Health & Wellness,-0.65,Health,Mon,
+8/19/23,8/23/23,BUS/MRT 308227846,Travel,-1.32,Transport,Mon,
 8/17/23,8/18/23,OPN Lab Studios,Health & Wellness,-42.79,Health,Mon,
+8/16/23,8/18/23,CARING PHARMACY-KLIA2,Health & Wellness,-0.65,Health,Mon,
 8/15/23,8/16/23,URBAN SPRING,Personal,-64.66,Health,Mon,
 8/14/23,8/16/23,Foodpanda Malaysia,Groceries,-11.66,Food,Mon,
 8/14/23,8/15/23,GRAB RIDES-EC,Travel,-2.41,Transport,Both,Bali
@@ -98,53 +211,53 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 8/12/23,8/14/23,FOUR SEASONS RESORT BALI,Travel,-93.46,Food,Both,Bali
 8/12/23,8/14/23,FOUR SEASONS RESORT,Travel,-104.99,Food,Both,Bali
 8/12/23,8/14/23,Grab* A-59SLL9RWWH5F,Food & Drink,-7.2,Transport,Both,Bali
-8/10/23,8/13/23,WWW.GRABTAXI.COM,Travel,-5.59,Transport,Both,Bali
-8/11/23,8/13/23,ADIK KECIL ZIBIRU PT-HO,Food & Drink,-21.46,Food,Both,Bali
-8/8/23,8/13/23,BUS/MRT 303285169,Travel,-3.62,Transport,Both,
 8/12/23,8/13/23,WWW.GRABTAXI.COM,Travel,-9.27,Transport,Both,Bali
+8/12/23,8/13/23,Grab* A-59RWEDQWWH8A,Food & Drink,-6.5,Food,Both,Bali
+8/12/23,8/13/23,GRAB FOOD,Food & Drink,-4.47,Food,Both,Bali
+8/11/23,8/13/23,ADIK KECIL ZIBIRU PT-HO,Food & Drink,-21.46,Food,Both,Bali
 8/11/23,8/13/23,Grab* A-59O7PT5WWICI,Food & Drink,-8.36,Food,Both,Bali
 8/11/23,8/13/23,Grab* A-59O8EOWWWJ7A,Food & Drink,-15.68,Food,Both,Bali
-8/12/23,8/13/23,Grab* A-59RWEDQWWH8A,Food & Drink,-6.5,Food,Both,Bali
 8/11/23,8/13/23,Grab* A-59NPCUPGWGEK,Travel,-3.23,Transport,Both,Bali
 8/11/23,8/13/23,Grab* A-59N22MCWWERR,Travel,-3.62,Transport,Both,Bali
 8/11/23,8/13/23,Grab* A-59OXPKPGWIAV,Travel,-7.57,Transport,Both,Bali
-8/12/23,8/13/23,GRAB FOOD,Food & Drink,-4.47,Food,Both,Bali
-8/7/23,8/11/23,BUS/MRT 302839483,Travel,-3.52,Transport,Mon,
-8/6/23,8/11/23,BUS/MRT 302437264,Travel,-4.4,Transport,Mon,
+8/10/23,8/13/23,WWW.GRABTAXI.COM,Travel,-5.59,Transport,Both,Bali
 8/10/23,8/11/23,Grab* A-59ILI83G2IKS,Food & Drink,-6.32,Transport,Both,Bali
 8/10/23,8/11/23,WWW.GRABTAXI.COM,Travel,-3.62,Transport,Both,Bali
 8/9/23,8/11/23,Grab* A-59FH9QQWWGD2,Travel,-3.61,Transport,Both,Bali
 8/9/23,8/10/23,ADIK KECIL ZIBIRU PT-HO,Food & Drink,-25.36,Food,Both,Bali
 8/9/23,8/9/23,Spotify USA,Bills & Utilities,-9.99,Entertainment,Kevin,
+8/8/23,8/13/23,BUS/MRT 303285169,Travel,-3.62,Transport,Both,
 8/8/23,8/8/23,MerciMarcelOrchardqlub,Food & Drink,-46.91,Food,Mon,
-8/4/23,8/8/23,BUS/MRT 301489847,Travel,-2.53,Transport,Mon,
-8/6/23,8/8/23,COMMON MAN STAN,Food & Drink,-14.22,Food,Both,
-8/3/23,8/8/23,BUS/MRT 301074464,Travel,-1.67,Transport,Mon,
+8/7/23,8/11/23,BUS/MRT 302839483,Travel,-3.52,Transport,Mon,
 8/7/23,8/8/23,The Glasshouse Chijmes,Food & Drink,-7.11,Food,Mon,
 8/7/23,8/8/23,Grab* A-597EMINGWI6P,Food & Drink,-24.17,Transport,Mon,
+8/6/23,8/11/23,BUS/MRT 302437264,Travel,-4.4,Transport,Mon,
+8/6/23,8/8/23,COMMON MAN STAN,Food & Drink,-14.22,Food,Both,
+8/4/23,8/8/23,BUS/MRT 301489847,Travel,-2.53,Transport,Mon,
 8/4/23,8/6/23,LITTLE FARMS-TANGLIN MALL,Food & Drink,-47.89,Food,Mon,
 8/4/23,8/6/23,GUARDIAN - TANGLIN MALL,Health & Wellness,-1.49,Necessities,Mon,
-7/31/23,8/2/23,MCDONALD'S (BSP),Food & Drink,-3.35,Food,Mon,
+8/3/23,8/8/23,BUS/MRT 301074464,Travel,-1.67,Transport,Mon,
 8/1/23,8/2/23,SIA_SGP_SGD_6182445340497,Travel,-1250.09,Travel,Mon,Mon London
 8/1/23,8/1/23,Payment Thank You Bill Pa,,1382.85,Payment,,
+7/31/23,8/2/23,MCDONALD'S (BSP),Food & Drink,-3.35,Food,Mon,
 7/31/23,8/1/23,WONDERFUL BAPSANG - THOMS,Food & Drink,-28.26,Food,Mon,
 7/31/23,8/1/23,GRUB JUNCTION 8,Food & Drink,-42.51,Food,Mon,
 7/27/23,7/30/23,HAI DI LAO-ZENITH SUASANA,Food & Drink,-12.25,Food,Mon,
+7/27/23,7/27/23,Payment Thank You Bill Pa,,600,Payment,,
 7/26/23,7/27/23,Klook Travel,Travel,-156.03,Travel,Both,Bali
 7/26/23,7/27/23,Grab* A-57LJCBAWWIG8,Travel,-17.71,Transport,Mon,
-7/27/23,7/27/23,Payment Thank You Bill Pa,,600,Payment,,
 7/26/23,7/26/23,YAKUN.COM,Food & Drink,-6.93,Food,Mon,
-7/23/23,7/25/23,GONGYUAN MALATANG-AMK HUB,Food & Drink,-17.88,Food,Both,
-7/24/23,7/25/23,NET*GROUND ZERO,Health & Wellness,-3.73,Health,Mon,
 7/25/23,7/25/23,PARKING.SG BILL_06C205,Travel,-1.35,Transport,Kevin,
+7/24/23,7/25/23,NET*GROUND ZERO,Health & Wellness,-3.73,Health,Mon,
+7/23/23,7/25/23,GONGYUAN MALATANG-AMK HUB,Food & Drink,-17.88,Food,Both,
 7/23/23,7/25/23,MR COCONUT-AMK HUB,Food & Drink,-4.75,Food,Kevin,
 7/22/23,7/23/23,GetGo,Travel,-8.15,Transport,Mon,
-7/21/23,7/23/23,HeyTea SG 3DS,Food & Drink,-5.22,Food,Kevin,
 7/22/23,7/23/23,GetGo,Travel,-10.94,Transport,Kevin,
 7/22/23,7/23/23,GetGo,Travel,-4.07,Transport,Kevin,
+7/22/23,7/23/23,WATSON'S-CONCOURSE SALES,Health & Wellness,-55.63,Health,Mon,
+7/21/23,7/23/23,HeyTea SG 3DS,Food & Drink,-5.22,Food,Kevin,
 7/21/23,7/23/23,TAI CHEONG BAKERY (VIVO),Food & Drink,-7.72,Food,Mon,
 7/21/23,7/23/23,GetGo,Travel,-34.75,Transport,Kevin,
-7/22/23,7/23/23,WATSON'S-CONCOURSE SALES,Health & Wellness,-55.63,Health,Mon,
 7/20/23,7/21/23,STUFF'D AMK HUB,Food & Drink,-6.28,Food,Mon,
 7/20/23,7/20/23,YAKUN.COM,Food & Drink,-3.94,Food,Mon,
 7/19/23,7/20/23,WTRATLAS-COFFEEHOUSE-,Food & Drink,-25.28,Food,Mon,
@@ -152,8 +265,8 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 7/18/23,7/19/23,AIRBNB * TARWK4PH,Travel,-190.31,Travel,Both,Bali
 7/18/23,7/19/23,TOAST BOX - AMK HUB,Food & Drink,-2.88,Food,Mon,
 7/15/23,7/18/23,BATIK AIR -IG1166422,Travel,-336.98,Travel,Both,Bali
-7/14/23,7/18/23,BUS/MRT 292408819,Travel,-3.18,Transport,Mon,
 7/15/23,7/16/23,SIA_SGP_SGD_6182444899772,Travel,-94.46,Transport,Both,Bali
+7/14/23,7/18/23,BUS/MRT 292408819,Travel,-3.18,Transport,Mon,
 7/14/23,7/16/23,SURREY HILLS GROCER - ION,Groceries,-67.43,Food,Mon,
 7/14/23,7/16/23,Foodpanda Singapore,Food & Drink,-14.47,Food,Both,
 7/14/23,7/16/23,HeyTea SG 3DS,Food & Drink,-4.77,Food,Both,
@@ -163,117 +276,117 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 7/11/23,7/12/23,KALEIDO - WISMA ATRIA,Shopping,-15.33,Shopping,Mon,
 7/11/23,7/12/23,WATSON'S,Health & Wellness,-1.19,Health,Mon,
 7/11/23,7/12/23,Julia Beauty,Personal,-35.71,Shopping,Mon,
-7/8/23,7/11/23,Gopay-Gojek,Travel,-13.01,Transport,Mon,
-7/7/23,7/11/23,Gopay-Gojek,Travel,-27.94,Transport,Mon,
-7/9/23,7/11/23,7-ELEVEN-RENDEZVOUS HOTEL,Groceries,-13.53,Food,Both,
+7/11/23,7/11/23,Grab* 8fe4aeee83775719,Personal,-8.93,Transport,Mon,
 7/10/23,7/11/23,Foodpanda Singapore,Food & Drink,-17.91,Food,Both,
 7/10/23,7/11/23,Elijah Pies TJPG,Food & Drink,-21.81,Food,Mon,
-7/11/23,7/11/23,Grab* 8fe4aeee83775719,Personal,-8.93,Transport,Mon,
+7/9/23,7/11/23,7-ELEVEN-RENDEZVOUS HOTEL,Groceries,-13.53,Food,Both,
 7/9/23,7/10/23,PROJECTOR X :PICTUREHOUSE,Entertainment,-14.12,Food,Mon,
 7/9/23,7/10/23,PROJECTOR X :PICTUREHOUSE,Entertainment,-14.12,Food,Mon,
 7/9/23,7/10/23,PROJECTOR X :PICTUREHOUSE,Entertainment,-1.49,Food,Mon,
-7/8/23,7/9/23,RITZ CARLTON MILLENIA SIN,Travel,-137.36,Travel,Mon,
 7/9/23,7/9/23,Spotify USA,Bills & Utilities,-9.99,Entertainment,Kevin,
+7/8/23,7/11/23,Gopay-Gojek,Travel,-13.01,Transport,Mon,
+7/8/23,7/9/23,RITZ CARLTON MILLENIA SIN,Travel,-137.36,Travel,Mon,
+7/7/23,7/11/23,Gopay-Gojek,Travel,-27.94,Transport,Mon,
 7/7/23,7/9/23,McDonalds 27,Food & Drink,-9.75,Food,Both,
 7/6/23,7/7/23,FAIRPRICE XTRA-AMK,Groceries,-9.57,Groceries,Both,
 7/5/23,7/6/23,Foodpanda Singapore,Food & Drink,-20.49,Food,Both,
-7/2/23,7/4/23,HAI DI LAO - PLAZA SING,Food & Drink,-36.49,Food,Both,
-7/3/23,7/4/23,ACTIVESG SPORT SINGAPORE,Bills & Utilities,-7.4,Entertainment,Mon,
 7/4/23,7/4/23,Payment Thank You Bill Pa,,946.6,Payment,,
+7/3/23,7/4/23,ACTIVESG SPORT SINGAPORE,Bills & Utilities,-7.4,Entertainment,Mon,
+7/2/23,7/4/23,HAI DI LAO - PLAZA SING,Food & Drink,-36.49,Food,Both,
 7/1/23,7/2/23,ANNUAL MEMBERSHIP FEE,Fees & Adjustments,-95,Shopping,Kevin,
 6/30/23,7/2/23,STARBUCKS-SC-MOBILE AP,Food & Drink,-37.03,Food,Mon,
 6/29/23,6/30/23,WTRAPOLLO-COFFEE-BAR,Food & Drink,-40.04,Food,Mon,
 6/29/23,6/30/23,YANG,Food & Drink,-30.01,Food,Mon,
-6/27/23,6/29/23,MORNING GRIND,Food & Drink,-2.07,Food,Mon,
 6/28/23,6/29/23,TORASHO RAMEN &amp; CHARCOAL,Food & Drink,-44.12,Food,Mon,
-6/27/23,6/28/23,GLYPH SUPPLY CO,Food & Drink,-17.04,Food,Mon,
 6/28/23,6/28/23,PEATIX.COM,Shopping,-39,Shopping,Mon,
-6/22/23,6/27/23,BUS/MRT 282966535,Travel,-2.72,Transport,Mon,
-6/25/23,6/27/23,NAM NAM NOODLE BAR - WP,Food & Drink,-24.13,Food,Both,
-6/23/23,6/27/23,BUS/MRT 283374982,Travel,-2.71,Transport,Mon,
+6/27/23,6/29/23,MORNING GRIND,Food & Drink,-2.07,Food,Mon,
+6/27/23,6/28/23,GLYPH SUPPLY CO,Food & Drink,-17.04,Food,Mon,
 6/26/23,6/27/23,NET*BOLD FITNESS,Health & Wellness,-8.04,Health,Mon,
 6/26/23,6/27/23,SEPHORA SINGAPORE PTE LTD,Shopping,-30.17,Shopping,Mon,
+6/25/23,6/27/23,NAM NAM NOODLE BAR - WP,Food & Drink,-24.13,Food,Both,
 6/25/23,6/26/23,Cabcharge Asia Pte Ltd,Travel,-14.08,Transport,Mon,
 6/24/23,6/25/23,GetGo,Travel,-3.35,Transport,Kevin,
 6/24/23,6/25/23,GetGo,Travel,-0.89,Transport,Kevin,
+6/23/23,6/27/23,BUS/MRT 283374982,Travel,-2.71,Transport,Mon,
 6/23/23,6/25/23,IL LIDO PL-LEVANT,Food & Drink,-57.66,Food,Mon,
-6/21/23,6/25/23,Gopay-Gojek,Travel,-11.27,Transport,Mon,
 6/23/23,6/25/23,TS/SAGO HOUSE,Food & Drink,-99.35,Food,Mon,
+6/22/23,6/27/23,BUS/MRT 282966535,Travel,-2.72,Transport,Mon,
+6/21/23,6/25/23,Gopay-Gojek,Travel,-11.27,Transport,Mon,
 6/21/23,6/22/23,WWW.GRAB.COM,Travel,-5.45,Transport,Both,Thailand
 6/21/23,6/22/23,WWW.GRAB.COM,Travel,-3.75,Transport,Both,Thailand
 6/21/23,6/22/23,WWW.GRAB.COM,Travel,-2.31,Transport,Both,Thailand
-6/20/23,6/22/23,7-11 PHAHONYOTHIN 2,Groceries,-1.99,Food,Both,Thailand
 6/21/23,6/22/23,KIN CAFE-DONMUEANG AIRPOR,Food & Drink,-3.46,Food,Both,Thailand
 6/21/23,6/22/23,WWW.GRAB.COM,Travel,-11.66,Transport,Both,Thailand
 6/21/23,6/22/23,WWW.GRAB.COM,Travel,-6.09,Transport,Both,Thailand
+6/20/23,6/22/23,7-11 PHAHONYOTHIN 2,Groceries,-1.99,Food,Both,Thailand
 6/20/23,6/21/23,HOUSE OF HEALS,Food & Drink,-37.03,Entertainment,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-1.44,Transport,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-1.44,Transport,Both,Thailand
 6/20/23,6/21/23,CENTER POINT(NHAINATOWN),Shopping,-44.64,Shopping,Mon,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-0.84,Transport,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-0.58,Transport,Both,Thailand
-6/19/23,6/21/23,WWW.GRAB.COM,Travel,-6.1,Transport,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-8.61,Transport,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-6.44,Transport,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-4.83,Transport,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-4.71,Transport,Both,Thailand
 6/20/23,6/21/23,WWW.GRAB.COM,Travel,-2.98,Transport,Both,Thailand
-6/18/23,6/20/23,WWW.GRAB.COM,Travel,-3.47,Transport,Both,Thailand
+6/19/23,6/21/23,WWW.GRAB.COM,Travel,-6.1,Transport,Both,Thailand
 6/19/23,6/20/23,AFTER YOU-CENTRAL WORLD,Food & Drink,-23.29,Food,Both,Thailand
-6/18/23,6/20/23,WWW.GRAB.COM,Travel,-0.2,Transport,Both,Thailand
 6/19/23,6/20/23,WWW.GRAB.COM,Travel,-13.88,Transport,Both,Thailand
 6/19/23,6/20/23,WWW.GRAB.COM,Travel,-9.17,Transport,Both,Thailand
 6/19/23,6/20/23,WWW.GRAB.COM,Travel,-5.38,Transport,Both,Thailand
 6/19/23,6/20/23,WWW.GRAB.COM,Travel,-4.98,Transport,Both,Thailand
-6/17/23,6/20/23,Gopay-Gojek,Travel,-11.69,Transport,Both,Thailand
 6/19/23,6/20/23,WWW.GRAB.COM,Travel,-4.57,Transport,Both,Thailand
+6/18/23,6/20/23,WWW.GRAB.COM,Travel,-3.47,Transport,Both,Thailand
+6/18/23,6/20/23,WWW.GRAB.COM,Travel,-0.2,Transport,Both,Thailand
 6/18/23,6/20/23,WWW.GRAB.COM,Travel,-19.06,Transport,Both,Thailand
 6/18/23,6/20/23,WWW.GRAB.COM,Travel,-4.83,Transport,Both,Thailand
-6/17/23,6/19/23,WWW.GRAB.COM,Travel,-0.09,Transport,Both,Thailand
 6/18/23,6/19/23,TENJO-SIAM SQUARE ONE,Food & Drink,-58.42,Food,Both,Thailand
 6/18/23,6/19/23,WWW.GRAB.COM,Travel,-5.58,Transport,Both,Thailand
 6/18/23,6/19/23,WWW.GRAB.COM,Travel,-5.55,Transport,Both,Thailand
 6/18/23,6/19/23,WWW.GRAB.COM,Travel,-4.66,Transport,Both,Thailand
 6/18/23,6/19/23,WWW.GRAB.COM,Travel,-4.63,Transport,Both,Thailand
+6/18/23,6/19/23,NAIL HUB BKK,Personal,-28.93,Misc,Mon,Thailand
+6/17/23,6/20/23,Gopay-Gojek,Travel,-11.69,Transport,Both,Thailand
+6/17/23,6/19/23,WWW.GRAB.COM,Travel,-0.09,Transport,Both,Thailand
 6/17/23,6/19/23,WWW.GRAB.COM,Travel,-6.51,Transport,Both,Thailand
 6/17/23,6/19/23,WWW.GRAB.COM,Travel,-5.44,Transport,Both,Thailand
-6/18/23,6/19/23,NAIL HUB BKK,Personal,-28.93,Misc,Mon,Thailand
 6/17/23,6/19/23,WWW.GRAB.COM,Travel,-5.29,Transport,Mon,Thailand
 6/15/23,6/18/23,MORNING GRIND,Food & Drink,-2.09,Food,Mon,
 6/15/23,6/16/23,The Glasshouse Chijmes,Food & Drink,-7.1,Food,Mon,
 6/15/23,6/16/23,WWW.GROUNDZERO.SG,Health & Wellness,-23.17,Health,Mon,
 6/15/23,6/16/23,LULULEMON ATHLETICA SG PT,Shopping,-58.3,Shopping,Mon,
 6/14/23,6/15/23,TORASHO RAMEN &amp; CHARCOAL,Food & Drink,-74.67,Food,Mon,
-6/12/23,6/13/23,SONG FA BAK KUT TEH FOOD,Food & Drink,-28.35,Food,Mon,
 6/13/23,6/13/23,MerciMarcelClubStqlub,Food & Drink,-28.36,Food,Mon,
-6/10/23,6/13/23,EFTPAY*THE MATCHA TOKYO,Food & Drink,-6.13,Food,Both,Hong Kong
+6/12/23,6/13/23,SONG FA BAK KUT TEH FOOD,Food & Drink,-28.35,Food,Mon,
 6/11/23,6/12/23,BAKEHOUSE TST,Food & Drink,-18.38,Food,Mon,Hong Kong
+6/10/23,6/13/23,EFTPAY*THE MATCHA TOKYO,Food & Drink,-6.13,Food,Both,Hong Kong
 6/9/23,6/9/23,Spotify USA,Bills & Utilities,-9.99,Entertainment,Kevin,
 6/6/23,6/6/23,Payment Thank You Bill Pa,,157.21,Payment,,
 6/4/23,6/5/23,CREATIVE MIND DESIGN W,Groceries,-24.02,Groceries,Mon,Hong Kong
-6/2/23,6/4/23,ICHIRAN HK TST,Food & Drink,-32.45,Food,Mon,Hong Kong
 6/3/23,6/4/23,PEAK TRAMWAYS CO LTD07700,Travel,-19.16,Transport,Mon,Hong Kong
+6/3/23,6/4/23,BLUE BOTTLE COFFEE HON,Groceries,-7.15,Food,Mon,Hong Kong
+6/2/23,6/4/23,ICHIRAN HK TST,Food & Drink,-32.45,Food,Mon,Hong Kong
 6/2/23,6/4/23,BBMSL*OMOTESANDO KOFFEE,Food & Drink,-14.82,Food,Mon,Hong Kong
 6/2/23,6/4/23,MCDONALD'S HK 271,Food & Drink,-10.74,Food,Mon,Hong Kong
-6/3/23,6/4/23,BLUE BOTTLE COFFEE HON,Groceries,-7.15,Food,Mon,Hong Kong
-5/31/23,6/1/23,TAKASHIMAYA (S) LTD,Food & Drink,-2.22,Food,Mon,
 6/1/23,6/1/23,Payment Thank You Bill Pa,,1142.35,Payment,,
+5/31/23,6/1/23,TAKASHIMAYA (S) LTD,Food & Drink,-2.22,Food,Mon,
 5/31/23,6/1/23,Aesop Ngee Ann City II,Shopping,-30.39,Shopping,Mon,
 5/31/23,6/1/23,ALCHEMIST HEEREN,Food & Drink,-15.94,Food,Mon,
 5/30/23,5/31/23,THE DAILY CUT - ORP,Food & Drink,-7.78,Food,Mon,
 5/28/23,5/30/23,DIN TAI FUNG-SUNTEC CITY,Food & Drink,-24.47,Food,Mon,
 5/28/23,5/29/23,CAFE USAGI,Food & Drink,-4.81,Food,Mon,
 5/27/23,5/28/23,SINGPOST - ORCHARD,Personal,-8.81,Business,Mon,
+5/27/23,5/28/23,Foodpanda Singapore,Food & Drink,-16.73,Food,Both,
 5/26/23,5/28/23,LHR T2A WDF MAIN,Shopping,-82.52,Shopping,Mon,Mon London
 5/26/23,5/28/23,LHR T2A WDF MAIN,Shopping,-115.04,Shopping,Mon,Mon London
-5/27/23,5/28/23,Foodpanda Singapore,Food & Drink,-16.73,Food,Both,
 5/26/23,5/28/23,FREENOW* 8WACN1-2,Travel,-55.76,Transport,Mon,Mon London
 5/21/23,5/22/23,SQ *OMOTESANDO KOFFEE,Food & Drink,-15.61,Food,Mon,Mon London
 5/9/23,5/12/23,PAYPAL *PNORPS,Shopping,-276.67,Shopping,Mon,
-5/8/23,5/10/23,HYDRATE,Food & Drink,-2.19,Food,Mon,
-5/7/23,5/9/23,Cava,Food & Drink,-68.24,Food,Both,
 5/9/23,5/9/23,Spotify USA,Bills & Utilities,-9.99,Entertainment,Kevin,
+5/8/23,5/10/23,HYDRATE,Food & Drink,-2.19,Food,Mon,
 5/8/23,5/9/23,TORI-Q AMK HUB,Food & Drink,-12.11,Food,Mon,
+5/7/23,5/9/23,Cava,Food & Drink,-68.24,Food,Both,
 5/6/23,5/7/23,Prime Video *9S6QA2LK3,Shopping,-3.99,Misc,Kevin,
 5/5/23,5/7/23,THE DAILY CUT - ORP,Food & Drink,-19.38,Food,Mon,
 5/4/23,5/5/23,MUJI CAFE-PLZ SING,Food & Drink,-16.36,Food,Mon,
@@ -286,19 +399,19 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 4/30/23,5/1/23,GOJEK,Travel,-24.85,Transport,Mon,
 4/30/23,5/1/23,GOJEK,Travel,-14.86,Transport,Mon,
 4/29/23,4/30/23,HEYTEA N3DS,Food & Drink,-5.18,Food,Mon,
-4/28/23,4/30/23,SPA HAVEN PTE. LTD.,Health & Wellness,-200.88,Shopping,Mon,
 4/29/23,4/30/23,CAFE USAGI,Food & Drink,-5.1,Food,Mon,
+4/28/23,4/30/23,SPA HAVEN PTE. LTD.,Health & Wellness,-200.88,Shopping,Mon,
 4/27/23,4/28/23,TICKETING,Food & Drink,-22.53,Food,Mon,
 4/26/23,4/27/23,THE DAILY CUT - ORP,Food & Drink,-7.89,Food,Mon,
 4/25/23,4/26/23,MRS PHO KITCHEN 313 AT,Food & Drink,-26.94,Food,Both,
 4/25/23,4/26/23,SKIN PPLE,Health & Wellness,-210.81,Health,Mon,
 4/24/23,4/25/23,Foodpanda Singapore,Food & Drink,-11.27,Food,Both,
 4/24/23,4/25/23,GOJEK,Travel,-11.72,Transport,Mon,
-4/21/23,4/25/23,HAI DI LAO-313 ORCHARD,Food & Drink,-52.37,Food,Mon,
 4/23/23,4/24/23,GOJEK,Travel,-12.78,Transport,Mon,
 4/23/23,4/24/23,Foodpanda Singapore,Food & Drink,-32.66,Food,Mon,
 4/23/23,4/24/23,POPEYES - AMK,Food & Drink,-11.72,Food,Mon,
 4/22/23,4/23/23,WTRATLAS-COFFEEHOUSE-,Food & Drink,-60.5,Food,Mon,
+4/21/23,4/25/23,HAI DI LAO-313 ORCHARD,Food & Drink,-52.37,Food,Mon,
 4/20/23,4/21/23,TS/SUKIYA SOMERSET,Food & Drink,-6.54,Food,Mon,
 4/20/23,4/21/23,STARBUCKS@313(3S),Food & Drink,-15.03,Food,Mon,
 4/18/23,4/19/23,FR WISMA-HENIU TEPPANYAKI,Food & Drink,-31.94,Food,Mon,
@@ -306,31 +419,31 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 4/14/23,4/16/23,STARBUCKS-SC-MOBILE AP,Food & Drink,-15.14,Food,Mon,
 4/13/23,4/16/23,MCDONALD'S (AMK),Food & Drink,-18.25,Food,Both,
 4/13/23,4/16/23,STARBUCKS-SC-MOBILE AP,Food & Drink,-15.08,Food,Mon,
-4/8/23,4/12/23,Datacamp Inc.,Professional Services,149,Misc,Kevin,
-4/10/23,4/12/23,SINGAPOREAIR6182442821161,Travel,-173.12,Travel,Both,Korea
 4/11/23,4/12/23,THE SOUP SPOON PL - AMK,Food & Drink,-11.76,Food,Mon,
 4/11/23,4/12/23,STARBUCKS@AMK HUB(AMK),Food & Drink,-7.54,Food,Mon,
+4/10/23,4/12/23,SINGAPOREAIR6182442821161,Travel,-173.12,Travel,Both,Korea
+4/8/23,4/12/23,Datacamp Inc.,Professional Services,149,Misc,Kevin,
 4/8/23,4/9/23,MR COCONUT-AMK HUB,Food & Drink,-4.82,Food,Kevin,
 4/8/23,4/9/23,Spotify USA,Bills & Utilities,-9.99,Entertainment,Mon,
 4/8/23,4/9/23,Datacamp Inc.,Professional Services,-149,Misc,Kevin,
 4/6/23,4/7/23,FLYSCOOT.COM0000000K8D37J,Travel,-26.75,Travel,Both,Korea
 4/5/23,4/7/23,YONSEI YEOIGAM DENTAL CLI,Health & Wellness,-241.49,Health,Mon,
+4/4/23,4/4/23,Payment Thank You Bill Pa,,2763.22,Payment,,
 4/3/23,4/5/23,7-ELEVEN,Shopping,-2.17,Food,Both,
 4/3/23,4/5/23,CO. LTD PARIS CROISSANT P,Food & Drink,-3.03,Food,Mon,
 4/2/23,4/4/23,(YU)NYUBALLANSEUGOO,Shopping,-123.37,Shopping,Mon,Korea
-4/4/23,4/4/23,Payment Thank You Bill Pa,,2763.22,Payment,,
 3/27/23,3/28/23,NHN KCP,Shopping,-7.86,Travel,Both,Korea
+3/25/23,3/26/23,KLOOK TRAVEL,Travel,-132.21,Travel,Both,Korea
 3/24/23,3/27/23,K-ETA,Shopping,-15.82,Travel,Both,Korea
 3/24/23,3/27/23,KICC FOREIGN CREDIT CARD,Shopping,-27.44,Travel,Both,Korea
-3/25/23,3/26/23,KLOOK TRAVEL,Travel,-132.21,Travel,Both,Korea
 3/23/23,3/24/23,AIRBNB * HMARN2KPZX,Travel,-97.11,Travel,Both,Korea
 3/23/23,3/24/23,MOS BURGER-ONE FULLERTON,Food & Drink,-16.87,Food,Mon,
-3/18/23,3/21/23,CATHAY CINEPLEXES PTE,Entertainment,-25.41,Entertainment,Both,
 3/20/23,3/21/23,HAI DI LAO - PLAZA SING,Food & Drink,-85.93,Food,Both,
-3/17/23,3/19/23,WESMILE DENTAL CARE,Health & Wellness,-100.34,Health,Mon,
+3/18/23,3/21/23,CATHAY CINEPLEXES PTE,Entertainment,-25.41,Entertainment,Both,
 3/18/23,3/19/23,HAI DI LAO-313 ORCHARD,Food & Drink,-127.1,Food,Both,
-3/17/23,3/19/23,GLENEAGLES,Health & Wellness,-100.34,Health,Mon,
 3/18/23,3/19/23,AIRBNB * HMSHA28SME,Travel,-37.57,Travel,Both,Korea
+3/17/23,3/19/23,WESMILE DENTAL CARE,Health & Wellness,-100.34,Health,Mon,
+3/17/23,3/19/23,GLENEAGLES,Health & Wellness,-100.34,Health,Mon,
 3/17/23,3/19/23,PUNCH,Food & Drink,-26.94,Food,Mon,
 3/16/23,3/17/23,AIRBNB * HMRJRRRQSN,Travel,-137.3,Travel,Both,Korea
 3/15/23,3/16/23,FLYSCOOT.COM0000000K8D37J,Travel,-242.95,Travel,Both,Korea
@@ -338,15 +451,15 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 3/13/23,3/14/23,AIRBNB * HM3BR93MPB,Travel,-67.94,Travel,Both,Korea
 3/13/23,3/14/23,LunarCoffeeBrewers,Food & Drink,-5.57,Food,Mon,
 3/13/23,3/14/23,KKDAY SG,Travel,-21.62,Travel,Both,Korea
-3/12/23,3/14/23,MCDONALD'S (FR),Food & Drink,-10.77,Food,Both,
 3/13/23,3/14/23,AIRBNB * HM4WRDQT4P,Travel,-116.25,Food,Both,
 3/13/23,3/14/23,WTRLUNAR-COFFEE-BREWE,Food & Drink,-5.94,Food,Mon,
 3/13/23,3/13/23,Payment Thank You Bill Pa,,1500,Payment,,
-3/10/23,3/12/23,KYO KOHEE QPAY,Food & Drink,-6.59,Food,Kevin,
+3/12/23,3/14/23,MCDONALD'S (FR),Food & Drink,-10.77,Food,Both,
 3/11/23,3/12/23,SINGPOST - ORCHARD,Personal,-8.84,Business,Mon,
+3/11/23,3/12/23,GENKI SUSHI-NGEE ANN CITY,Food & Drink,-32.71,Food,Both,
+3/10/23,3/12/23,KYO KOHEE QPAY,Food & Drink,-6.59,Food,Kevin,
 3/10/23,3/12/23,EASYJET 000K528WNH,Travel,-114.61,Travel,Mon,Mon London
 3/10/23,3/12/23,AIRBNB * HMPDDERD8N,Travel,54.66,Travel,Both,Korea
-3/11/23,3/12/23,GENKI SUSHI-NGEE ANN CITY,Food & Drink,-32.71,Food,Both,
 3/9/23,3/10/23,WATSON'S,Health & Wellness,-5.59,Health,Mon,
 3/9/23,3/10/23,Supergreen,Food & Drink,-7.26,Food,Mon,
 3/8/23,3/9/23,Spotify USA,Bills & Utilities,-9.99,Entertainment,Kevin,
@@ -365,8 +478,8 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 2/16/23,2/17/23,KYO KOHEE QPAY,Food & Drink,-6.71,Food,Mon,
 2/14/23,2/15/23,K J INTERN* KJINTERNAT,Food & Drink,-115.44,Food,Mon,
 2/12/23,2/14/23,YA KUN ONE RAFFLES PLACE,Food & Drink,-6.51,Food,Both,
-2/11/23,2/14/23,GOJEK,Travel,-8.33,Transport,Both,
 2/12/23,2/13/23,THE DAILY CUT - ORP,Food & Drink,-16.58,Food,Both,
+2/11/23,2/14/23,GOJEK,Travel,-8.33,Transport,Both,
 2/8/23,2/9/23,Spotify USA,Bills & Utilities,-9.99,Entertainment,Kevin,
 2/7/23,2/8/23,SANPOUTEI RAMEN - SHAW,Food & Drink,-32.35,Food,Both,
 2/5/23,2/7/23,AN ACAI AFFAIR BUKITTIMAH,Food & Drink,-19.72,Food,Both,
@@ -395,25 +508,25 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 1/8/23,1/10/23,NBC STATIONERY &amp; GIFTS,Shopping,-26.76,Shopping,Mon,
 1/7/23,1/8/23,RAFFLES CITY CAFE MEAL,Food & Drink,-16.74,Food,Mon,
 1/5/23,1/6/23,AMZN Mktp US*R86W34CE3,Shopping,-21.54,Shopping,Kevin,
-1/4/23,1/5/23,FAIRPRICE XTRA-AMK,Groceries,-37.31,Groceries,Both,
 1/5/23,1/5/23,Payment Thank You Bill Pa,,1553.66,Payment,,
+1/4/23,1/5/23,FAIRPRICE XTRA-AMK,Groceries,-37.31,Groceries,Both,
 1/2/23,1/3/23,FAIRPRICE XTRA-AMK,Groceries,-21.36,Groceries,Both,
-12/29/22,1/1/23,CAFFE FERNET,Food & Drink,-102.39,Food,Both,
-12/29/22,1/1/23,HEYTEA MBS,Food & Drink,-5.13,Food,Both,
 12/31/22,1/1/23,SO PHO NOVENA,Food & Drink,-9.51,Food,Both,
 12/31/22,1/1/23,SINGTEL EXCLUSIVE RETAILE,Shopping,-178.01,Shopping,Kevin,
+12/29/22,1/1/23,CAFFE FERNET,Food & Drink,-102.39,Food,Both,
+12/29/22,1/1/23,HEYTEA MBS,Food & Drink,-5.13,Food,Both,
 12/28/22,12/29/22,FAIRPRICE XTRA-AMK,Groceries,-10.93,Groceries,Both,
 12/28/22,12/28/22,GOOGLE *Skype,Shopping,-2.99,Shopping,Kevin,
 12/26/22,12/27/22,AIRBNB * HMARN2KPZX,Travel,-95.47,Travel,Both,Korea
-12/21/22,12/27/22,KOREAN AIR_OVERSEAS CARD_,Travel,-96.1,Travel,Both,Korea
 12/25/22,12/26/22,FAIRPRICE XTRA-AMK,Groceries,-9.09,Groceries,Both,
 12/22/22,12/25/22,GARDENS BY THE BAY,Entertainment,-51.88,Misc,Both,
 12/22/22,12/23/22,AIRBNB * HM3BR93MPB,Travel,-68.78,Travel,Both,Korea
 12/22/22,12/23/22,5124-RailNinja,Travel,-140,Travel,Both,Korea
 12/22/22,12/23/22,FAIRPRICE XTRA-AMK,Groceries,-7.3,Groceries,Mon,
+12/22/22,12/22/22,SP APM MONACO,Shopping,-232.71,Shopping,Kevin,
+12/21/22,12/27/22,KOREAN AIR_OVERSEAS CARD_,Travel,-96.1,Travel,Both,Korea
 12/21/22,12/23/22,PAYPAL *STAYFOLIO,Travel,-351,Travel,Mon,Korea
 12/21/22,12/22/22,FAIRPRICE XTRA-AMK,Groceries,-9.78,Groceries,Both,
-12/22/22,12/22/22,SP APM MONACO,Shopping,-232.71,Shopping,Kevin,
 12/20/22,12/22/22,SINGAPOREAIR6182438103027,Travel,65.95,Travel,Both,Korea
 12/20/22,12/22/22,SINGAPOREAIR6182438103028,Travel,65.95,Travel,Both,Korea
 12/20/22,12/21/22,SINGAPOREAIR6182440419243,Travel,-88.03,Travel,Both,Korea
@@ -428,122 +541,84 @@ Transaction Date,Post Date,Description,Category,Amount,Custom Category,User,Grou
 12/10/22,12/13/22,HAI DI LAO - MARINA BAY,Food & Drink,-51.92,Food,Both,
 12/4/22,12/6/22,FR WISMA-HENIU TEPPANYAKI,Food & Drink,-24.34,Food,Both,
 12/4/22,12/5/22,Abseil,Food & Drink,-13.36,Food,Both,
-12/2/22,12/4/22,O CHICKEN &amp; BEER,Food & Drink,-49.72,Food,Kevin,
 12/3/22,12/4/22,SOI CANDY THAI NOODLE BAR,Food & Drink,-18.17,Food,Both,
 12/3/22,12/4/22,GIO GOURMET ITALIAN OSTER,Food & Drink,-57.65,Food,Both,
 12/3/22,12/4/22,Park Bench,Food & Drink,-44.55,Food,Both,
+12/2/22,12/4/22,O CHICKEN &amp; BEER,Food & Drink,-49.72,Food,Kevin,
 11/30/22,12/2/22,GIG-MERCH.COM,Shopping,-36.47,Shopping,Kevin,
 11/29/22,12/1/22,BEE'S KNEES URBAN,Food & Drink,-8.75,Food,Kevin,
-11/8/23,11/9/23,MOS BURGER-AMK HUB,Food & Drink,-26.52,Food,Both,
-11/8/23,11/9/23,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
-11/5/23,11/6/23,GetGo,Travel,-10.72,Transport,Both,
-11/4/23,11/5/23,LHR T2A WDF MAIN,Shopping,-131.86,Shopping,Mon,Mon London
-11/3/23,11/5/23,T K MAXX,Shopping,-49.14,Shopping,Mon ,Mon London
-11/3/23,11/5/23,GetGo,Travel,-20.79,Transport,Both,
-11/2/23,11/3/23,WELCOME BREAK LEIC FOREST,Groceries,-7.06,Groceries,Mon,Mon London
-11/2/23,11/2/23,Payment Thank You Bill Pa,,1200,Payment,,
-10/31/23,11/2/23,TFL TRAVEL CH,Travel,-8.54,Transport,Mon,Mon London
-10/31/23,11/1/23,RAWR BEAUTY ENFIELD,Personal,-8.52,Misc,Mon,Mon London
-10/31/23,11/1/23,BANG BANG TIGER HILL,Food & Drink,-6.94,Food,Mon,Mon London
-10/31/23,11/1/23,CL *Chase Travel,Travel,-1261.32,Travel,Both,NYC
-10/30/23,10/31/23,TFL TRAVEL CH,Travel,-12.79,Transport,Mon,Mon London
-10/30/23,10/31/23,Hanger shop,Shopping,-17.64,Shopping,Mon,Mon London
-10/30/23,10/31/23,GONG CHA GOODGE ST,Food & Drink,-7.18,Food,Mon,Mon London
-10/31/23,10/31/23,ANNUAL HOTEL CREDIT,Fees & Adjustments,50,Travel Credit,Both,NYC
-10/26/23,10/29/23,LLL ATHLETICA UK LTD,Shopping,-160.83,Shopping,Mon,Mon London
-10/27/23,10/29/23,TFL TRAVEL CH,Travel,-2.68,Transport,Mon,Mon London
-10/26/23,10/27/23,TFL TRAVEL CH,Travel,-8.5,Transport,Mon,Mon London
-10/26/23,10/27/23,DECIEM,Shopping,-42.4,Shopping,Mon,Mon London
-10/26/23,10/27/23,XIAN BIANGBIANG NOODLE,Food & Drink,-20.74,Food,Mon,Mon London
-10/25/23,10/26/23,TESCO STORES 2467,Groceries,-6.45,Groceries,Mon,Mon London
-10/24/23,10/25/23,TOWNHOUSE,Health & Wellness,-69.89,Health,Mon,Mon London
-10/24/23,10/25/23,TFL TRAVEL CH,Travel,-10.57,Transport,Mon,Mon London
-10/23/23,10/24/23,TFL TRAVEL CH,Travel,-12.51,Transport,Mon,Mon London
-10/22/23,10/23/23,TFL TRAVEL CH,Travel,-4.26,Transport,Mon,Mon London
-10/22/23,10/23/23,Zettle_*Attendant,Food & Drink,-5.97,Food,Mon,Mon London
-10/22/23,10/23/23,SANJUGO SHOREDITCH,Food & Drink,-15.95,Food,Mon,Mon London
-10/23/23,10/23/23,Payment Thank You Bill Pa,,500,Payment,,
-10/22/23,10/23/23,Katsute 100,Food & Drink,-5.48,Food,Mon,Mon London
-10/22/23,10/23/23,Katsute 100,Food & Drink,-5.3,Food,Mon,Mon London
-10/20/23,10/22/23,TFL TRAVEL CH,Travel,-9.62,Transport,Mon,Mon London
-10/20/23,10/22/23,STATION FOOD AND WINE,Groceries,-12.19,Food,Mon,Mon London
-10/19/23,10/20/23,N.PEAL Bicester Village,Shopping,-108.85,Shopping,Mon,Mon London
-10/19/23,10/20/23,Calvin Klein,Shopping,-34.21,Shopping,Mon,Mon London
-10/19/23,10/20/23,lululemon athletica uk,Shopping,-168.11,Shopping,Mon,Mon London
-10/19/23,10/20/23,SP SELF-PORTRAIT,Shopping,-247.39,Shopping,Mon,Mon London
-10/18/23,10/19/23,Calvin Klein Stores UK,Shopping,-57.45,Shopping,Mon,Mon London
-10/18/23,10/19/23,TFL TRAVEL CH,Travel,-9.71,Transport,Mon,Mon London
-10/18/23,10/19/23,Brandy Melville Covent Ga,Shopping,-42.78,Shopping,Mon,Mon London
-10/13/23,10/15/23,TESCO STORES 2467,Groceries,-2.34,Groceries,Mon,Mon London
-10/14/23,10/15/23,TFL TRAVEL CH,Travel,-12.11,Transport,Mon,Mon London
-10/14/23,10/15/23,FATBOY S THE BURGER BAR,Food & Drink,-107.8,Food,Kevin,
-10/14/23,10/15/23,LULULEMON ATHLETICA UK LT,Shopping,-37.42,Shopping,Mon,Mon London
-10/14/23,10/15/23,WWW.FLOWLDN.CO.UK,Personal,-36.68,Health,Mon,Mon London
-10/14/23,10/15/23,Zettle_*CROSSTOWN,Food & Drink,-12.84,Food,Mon,Mon London
-10/11/23,10/12/23,ZETTLE_*PROXY,Shopping,-184.43,Shopping,Mon,Mon London
-10/11/23,10/12/23,MARKS&amp;SPENCER PLC,Groceries,-1.72,Food,Mon,Mon London
-10/11/23,10/12/23,TIAN TIAN MARKET,Groceries,-7.33,Groceries,Mon,Mon London
-10/11/23,10/12/23,TFL TRAVEL CH,Travel,-14.19,Transport,Mon,Mon London
-10/11/23,10/12/23,Katsute 100,Food & Drink,-15.55,Food,Mon,Mon London
-10/10/23,10/11/23,WELCOME BREAK-CORLEY STAR,Groceries,-5.57,Groceries,Mon,Mon London
-10/9/23,10/9/23,Payment Thank You Bill Pa,,500,Payment,,
-10/9/23,10/9/23,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
-10/7/23,10/8/23,MARKS&amp;SPENCER PLC SACA,Groceries,-4.17,Groceries,Mon,Mon London
-12/30/23,12/31/23,UBER   EATS,Food & Drink,-19.32,Food,Both,NYC
-12/29/23,12/29/23,Payment Thank You Bill Pa,,524.74,Payment,,
-12/26/23,12/28/23,MOTTO NEW YORK CITY TIME,Travel,-137.68,Travel,Both,NYC
-12/25/23,12/26/23,BEST BAGEL AND COFFEE,Food & Drink,-14.8,Food,Both,NYC
-12/25/23,12/26/23,UBER   EATS,Food & Drink,-47.02,Food,Both,NYC
-12/24/23,12/25/23,BEST BAGEL AND COFFEE,Food & Drink,-14.8,Food,Both,NYC
-12/23/23,12/24/23,BEST BAGEL AND COFFEE,Food & Drink,-21.88,Food,Both,NYC
-12/22/23,12/24/23,TST* LA PECORA BIANCA 8,Food & Drink,-74.86,Food,Both,NYC
-12/20/23,12/21/23,Zodos Bowling &amp; Beyond,Food & Drink,-44.76,Food,Kevin,
-12/15/23,12/17/23,MCDONALD'S (AMK),Food & Drink,-28.47,Food,Both,
-12/13/23,12/14/23,Grab* 964c57885671d776,Personal,-15.7,Food,Mon,
-12/12/23,12/13/23,Grab* aab14bd8bf07c246,Personal,-15.67,Food,Mon,
-12/12/23,12/12/23,Grab* ba1091061d249439,Personal,-11.19,Food,Mon,
-12/11/23,12/12/23,KOPITIAM@AMKH,Food & Drink,-19.28,Food,Mon,
-12/8/23,12/10/23,McDonalds 930027,Food & Drink,-8.42,Food,Mon,
-12/8/23,12/10/23,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
-12/7/23,12/8/23,KOPITIAM@AMKH,Food & Drink,-21.51,Food,Mon,
-12/6/23,12/7/23,Grab* b75dc04f6a95682f,Personal,-35.17,Food,Mon,
-12/5/23,12/5/23,Grab* 92f94ce2e01e8653,Personal,-15.77,Food,Mon,
-12/3/23,12/5/23,TOAST BOX - AMK HUB,Food & Drink,-2.25,Food,Mon,
-12/3/23,12/5/23,MCDONALD'S (AMK),Food & Drink,-8.93,Food,Both,
-12/3/23,12/4/23,Grab* bd1dda55414ed078,Personal,-20.26,Food,Mon,
-12/4/23,12/4/23,Payment Thank You Bill Pa,,2135.71,Payment,,
-12/3/23,12/3/23,Grab* 897a17199c8fe1e8,Personal,-7.5,Food,Mon,
-12/2/23,12/3/23,PARIS BAGUETTE - AMK HUB,Food & Drink,-17.41,Food,Mon,
-12/2/23,12/3/23,MOS BURGER-AMK HUB,Food & Drink,-26.41,Food,Both,
-12/3/23,12/3/23,Grab* a7f9585bb36916da,Personal,-21.76,Food,Mon,
-11/29/23,12/1/23,STARBUCKS-SC-MOBILE AP,Food & Drink,-7.52,Food,Kevin,
-11/29/23,11/30/23,STARBUCKS@TANGLIN3(TG),Food & Drink,-7.52,Food,Mon,
-11/29/23,11/30/23,SG HAWKER - TANGLIN MALL,Food & Drink,-4.89,Food,Mon,
-11/26/23,11/28/23,COFFEEBOT SG,Food & Drink,-2.62,Food,Mon,
-11/27/23,11/27/23,Grab* 844074ff7632f854,Personal,-15.69,Food,Mon,
-11/26/23,11/27/23,Grab* 80c0f2c424892acb,Personal,-47.82,Food,Mon,
-11/24/23,11/26/23,Grab* A-5N76PSWWWHH7,Food & Drink,-14.94,Food,Mon,
-11/23/23,11/24/23,ABBA OL11 PTE LTD,Food & Drink,-28.26,Food,Mon,
-11/22/23,11/23/23,MOS BURGER-AMK HUB,Food & Drink,-6.07,Food,Mon,
-11/20/23,11/20/23,Grab* bdd34e8f0800f37a,Personal,-15.65,Food,Mon,
-11/19/23,11/19/23,Grab* a899a391896b8728,Personal,-15.65,Food,Mon,
-11/18/23,11/19/23,Grab* A-5MESW55GWGBP,Food & Drink,-15.72,Food,Mon,
-11/17/23,11/19/23,Gopay-Gojek,Travel,-10.26,Transport,Kevin,
-11/16/23,11/17/23,WONDERFUL BAPSANG - THOMS,Food & Drink,-40.43,Food,Both,
-11/16/23,11/17/23,SG HAWKER - TANGLIN MALL,Food & Drink,-8.17,Food,Mon,
-11/15/23,11/16/23,Grab* 81a7f687d00ea674,Personal,-20.03,Food,Mon,
-11/10/23,11/15/23,BUS/MRT 346170547,Travel,-1.56,Transport,Mon,
-11/13/23,11/15/23,HAI DI LAO-313 ORCHARD,Food & Drink,-92.3,Food,Both,
-11/14/23,11/15/23,Grab* A-5LVXBBBGWF85,Food & Drink,-27.82,Food,Mon,
-11/14/23,11/15/23,MALAYSIA BOLEH AMK HUB,Food & Drink,-1.99,Food,Mon,
-11/14/23,11/15/23,Klook Travel Technology P,Travel,-4.29,Travel,Kevin,
-11/14/23,11/15/23,Grab Subscription* v5-7c4,Travel,-4.41,Transport,Mon,
-11/14/23,11/15/23,MALAYSIA BOLEH AMK HUB,Food & Drink,-3.46,Food,Mon,
-11/14/23,11/15/23,NAM KEE PAU ANG MO KIO HU,Food & Drink,-3.46,Food,Mon,
-11/9/23,11/12/23,THE COFFEE BEAN,Food & Drink,-8.35,Food,Mon,
-11/9/23,11/12/23,THE COFFEE BEAN,Food & Drink,-11.09,Food,Mon,
-11/10/23,11/12/23,SG HAWKER - TANGLIN MALL,Food & Drink,-3.91,Food,Mon,
-11/12/23,11/12/23,Grab* a6a5e58528ea0b84,Personal,-16.93,Food,Mon,
-11/9/23,11/10/23,PARIS BAGUETTE - AMK HUB,Food & Drink,-9.24,Food,Mon,
-11/9/23,11/10/23,GetGo,Travel,-6.22,Transport,Kevin,
-11/9/23,11/10/23,GetGo,Travel,-8.35,Transport,Kevin,
+3/4/24,3/6/24,HAI DI LAO - MARINA BAY,Food & Drink,-93.83,Food,Both,
+3/5/24,3/5/24,Payment Thank You Bill Pa,,318.43,Payment,,
+3/4/24,3/5/24,MALAYSIA BOLEH AMK HUB,Food & Drink,-5.58,Food,Both,
+3/4/24,3/5/24,Grab* A-649EQATWWJ45,Travel,-23.08,Transport,Both,
+3/2/24,3/3/24,PAARU BAKERY,Food & Drink,-32.14,Food,Both,
+2/29/24,3/3/24,JUNIOR,Food & Drink,-103.55,Food,Both,
+2/25/24,2/26/24,CHICHA SAN CHEN - AMK HUB,Food & Drink,-3.58,Food,Both,
+2/24/24,2/25/24,MOS BURGER-AMK HUB,Food & Drink,-20.42,Food,Both,
+2/23/24,2/25/24,KOPITIAM @ LAU PA SAT,Food & Drink,-4.78,Food,Both,
+2/22/24,2/23/24,CHARRR,Food & Drink,-9.61,Food,Mon,
+2/20/24,2/21/24,CHARRR,Food & Drink,-8.86,Food,Mon,
+2/20/24,2/21/24,Ally 2,Health & Wellness,-8.04,Food,Mon,
+2/19/24,2/20/24,TAKASHIMAYA (S) LTD,Food & Drink,-4.98,Food,Both,
+2/16/24,2/18/24,SINGKOBA KBBQ - TANJONG P,Food & Drink,-23.1,Food,Mon,
+2/14/24,2/18/24,BUS/MRT 390866505,Travel,-1.74,Transport,Kevin,
+2/14/24,2/15/24,THE DAILY CUT - ORP,Food & Drink,-7.81,Food,Mon,
+2/14/24,2/15/24,Ally 2,Health & Wellness,-8.04,Food,Mon,
+2/11/24,2/14/24,STARBUCKS-SC-MOBILE AP,Food & Drink,-14.88,Food,Both,
+2/13/24,2/14/24,CHICHA SAN CHEN - AMK HUB,Food & Drink,-8.64,Food,Both,
+2/7/24,2/14/24,BUS/MRT 387722003,Travel,-3.06,Transport,Kevin,
+2/12/24,2/13/24,CHICHA SAN CHEN - AMK HUB,Food & Drink,-3.57,Food,Both,
+2/8/24,2/9/24,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
+2/8/24,2/9/24,Ally 2,Health & Wellness,-8.05,Food,Mon,
+2/4/24,2/7/24,STARBUCKS-SC-MOBILE AP,Food & Drink,-7.49,Food,Both,
+2/6/24,2/7/24,WILD CHILD,Food & Drink,-66.11,Food,Mon,
+2/7/24,2/7/24,TS/LITTLE CART NOODLE,Food & Drink,-41.92,Food,Both,
+2/4/24,2/5/24,Grab* 7-C6DTJZJ3JFVACA,Food & Drink,-19.26,Food,Both,
+2/5/24,2/5/24,Payment Thank You Bill Pa,,218.67,Payment,,
+2/3/24,2/4/24,TAKASHIMAYA (S) LTD,Food & Drink,-12.59,Food,Both,
+2/3/24,2/4/24,JAMBA JUICE-WISMA,Food & Drink,-5.17,Food,Both,
+2/3/24,2/4/24,TAKASHIMAYA (S) LTD,Food & Drink,-2.25,Food,Both,
+2/3/24,2/4/24,TAKASHIMAYA (S) LTD,Food & Drink,-13.49,Food,Both,
+1/31/24,2/1/24,THE DAILY CUT - ORP,Food & Drink,-7.85,Food,Mon,
+1/26/24,1/28/24,CURATE KITCHEN,Food & Drink,-1.87,Food,Kevin,
+1/25/24,1/26/24,CHARRR,Food & Drink,-8.91,Food,Mon,
+1/24/24,1/25/24,CURATE KITCHEN,Food & Drink,-1.5,Food,Kevin,
+1/23/24,1/25/24,CURATE KITCHEN,Food & Drink,-1.49,Food,Kevin,
+1/23/24,1/24/24,CHARRR,Food & Drink,-8.89,Food,Mon,
+1/22/24,1/23/24,MGWINE90 PTE. LTD,Food & Drink,-66.24,Food,Mon,
+1/19/24,1/21/24,CHARRR,Food & Drink,-8.87,Food,Mon,
+1/19/24,1/21/24,KOPITIAM@AMKH,Food & Drink,-1.64,Food,Both,
+1/19/24,1/21/24,CURATE KITCHEN,Food & Drink,-1.12,Food,Kevin,
+1/20/24,1/21/24,JAMBA JUICE-WISMA,Food & Drink,-5.15,Food,Both,
+1/20/24,1/21/24,GENKI SUSHI-NGEE ANN CITY,Food & Drink,-42.24,Food,Both,
+1/19/24,1/21/24,KOPITIAM@AMKH,Food & Drink,-19.42,Food,Both,
+1/15/24,1/19/24,BUS/MRT 375854617,Travel,-1.77,Transport,Kevin,
+1/18/24,1/19/24,CURATE KITCHEN,Food & Drink,-1.86,Food,Kevin,
+1/17/24,1/18/24,YA KUN KAYA TOAST HLB,Food & Drink,-2.69,Food,Both,
+1/17/24,1/18/24,KOPITIAM@AMKH,Food & Drink,-20.67,Food,Both,
+1/17/24,1/18/24,CURATE KITCHEN,Food & Drink,-2.7,Food,Kevin,
+1/14/24,1/18/24,BUS/MRT 375159509,Travel,-1.77,Transport,Both,
+1/17/24,1/17/24,Payment Thank You-Mobile,,712.21,Payment,Both,
+1/16/24,1/17/24,URBAN MIX,Food & Drink,-10.52,Food,Mon,
+1/16/24,1/17/24,CURATE KITCHEN,Food & Drink,-1.5,Food,Kevin,
+1/15/24,1/16/24,CURATE KITCHEN,Food & Drink,-0.75,Food,Kevin,
+1/14/24,1/16/24,LLAO LLAO - AMK,Food & Drink,-5.27,Food,Both,
+1/13/24,1/16/24,HAI DI LAO - MARINA BAY,Food & Drink,-59.57,Food,Both,
+1/13/24,1/15/24,MCDONALD'S (AMK),Food & Drink,-8.66,Food,Both,
+1/11/24,1/14/24,Gopay-Gojek,Travel,-32.4,Transport,Both,
+1/12/24,1/14/24,PHORAGE,Food & Drink,-101.9,Food,Both,
+1/12/24,1/14/24,CURATE KITCHEN,Food & Drink,-1.51,Food,Kevin,
+1/13/24,1/14/24,Ralph Lauren Singapore,Shopping,-7.15,Food,Both,
+1/10/24,1/12/24,CURATE KITCHEN,Food & Drink,-2.64,Food,Kevin,
+1/11/24,1/12/24,CURATE KITCHEN,Food & Drink,-2.26,Food,Kevin,
+1/9/24,1/10/24,CURATE KITCHEN,Food & Drink,-1.96,Food,Kevin,
+1/8/24,1/9/24,CURATE KITCHEN,Food & Drink,-2.49,Food,Kevin,
+1/6/24,1/9/24,Gopay-Gojek,Travel,-27.25,Transport,Both,
+1/8/24,1/9/24,SANPOUTEI RAMEN - SHAW,Food & Drink,-28.97,Food,Mon,
+1/8/24,1/9/24,Spotify USA,Bills & Utilities,-10.99,Entertainment,Kevin,
+1/7/24,1/9/24,HAI DI LAO-313 ORCHARD,Food & Drink,-51.86,Food,Both,
+1/7/24,1/8/24,Grab* A-5STHP7PWWIJM,Travel,-9.51,Transport,Both,
+1/7/24,1/8/24,WTR-MOONCHILD,Food & Drink,-6.15,Food,Mon,
+1/6/24,1/7/24,WTRNEPTUNE,Food & Drink,-119.39,Food,Both,
+1/7/24,1/7/24,WTR-MOONCHILD,Food & Drink,-66.62,Food,Mon,
+1/5/24,1/7/24,THE DAILY CUT - ORP,Food & Drink,-7.91,Food,Mon,

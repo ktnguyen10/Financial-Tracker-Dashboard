@@ -33,6 +33,12 @@ def query_user_columns(curs):
     return data
 
 
+def query_budget(curs, username):
+    curs.execute("SELECT * FROM budgets WHERE username LIKE (?)", (username,))
+    data = curs.fetchall()
+    return data
+
+
 def gen_dataframe(curs, username):
     df = pd.DataFrame.from_dict(query_transactions(curs, username))
     # Salaries

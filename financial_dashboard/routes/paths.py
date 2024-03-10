@@ -1,4 +1,5 @@
 import os
+import json
 import string
 import sqlite3
 from helpers import login_required
@@ -7,11 +8,10 @@ from datetime import datetime, timedelta
 from werkzeug.utils import secure_filename
 from flask_session import Session
 from financial_dashboard import app
-from financial_dashboard.routes import curs, conn
-from financial_dashboard.database import Database
+from financial_dashboard.routes import curs, conn, db
 from financial_dashboard.budget import Budget
 from financial_dashboard.dashboard.data_cleanup import gen_dataframe
-from flask import flash, redirect, render_template, request, session
+from flask import flash, redirect, render_template, request, session, jsonify
 from werkzeug.security import check_password_hash, generate_password_hash
 
 
@@ -146,12 +146,40 @@ def user_profile():
     return render_template("/profile")
 
 
-@app.route("/budget")
+@app.route("/budget", methods=["GET", "POST"])
 @login_required
 def see_budget():
-    # to update
+    lm = LoginManager()
+    username = lm.get_current_user()
+
+    if request.method == 'POST':
+        my_budget = request.json
+        dict_ = {'category': list(my_budget.keys()), 'amount': list(my_budget.values())}
+        return json.dumps(dict_)
+
     budget = Budget()
-    return render_template("/budget", budget=budget)
+    # get budget from database
+    my_budget = budget.get_budget(curs, username)
+    return render_template("budget.html",
+                           budget=zip(list(my_budget.keys()), list(my_budget.values())))
+
+
+@app.route("/set_budget", methods=["GET", "POST"])
+@login_required
+def set_new_budget():
+    lm = LoginManager()
+    username = lm.get_current_user()
+
+    # Read categories from new budget
+
+    # new_budget = new_budget.split(':')
+    # for i in range(0, len(new_budget), 2):
+    #     if new_budget[i] in my_budget['category']:
+    #         budget.update_amount(curs, conn, username, new_budget[i], new_budget[i+1])
+
+    # Budget should now equal new budget.
+    dict_ = {} # {'categories': my_budget['category'], 'amounts': my_budget['amount']}
+    return json.dumps(dict_)
 
 
 @app.route('/upload', methods=['GET', 'POST'])
@@ -181,15 +209,14 @@ def upload_file():
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], official_filename))
                 session['uploaded_data_file_path'] = os.path.join(app.config['UPLOAD_FOLDER'], official_filename)
                 try:
-                    db = Database()
                     db.read_file_to_db(session.get('uploaded_data_file_path', None), session.get("user_id"))
+                    flash_n_print('File uploaded successfully')
                 except sqlite3.OperationalError:
                     flash_n_print('Failed to upload data to the database. Check column and type compatibility!')
                 except:
                     flash_n_print('Failed to upload file(s). Ensure that they are in the correct format!')
 
                 # file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
-        flash_n_print('Files uploaded successfully')
         return render_template('uploaded.html', filenames=filenames)
     else:
         return render_template('upload.html')

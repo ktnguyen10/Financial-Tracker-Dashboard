@@ -9,44 +9,30 @@
         <h1>Budget</h1>
     </div>
     <div class="col-12">
-        <div class="col-6">
-            <form action="/profile" method="POST">
-                <label for="eatingOut">Eating Out: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="eatingOut" name="eatingOut" type="number">
-                <p>Current: {{budget.eatingout}} </p> <br/>
-                <label for="gas">Gasoline: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="gas" name="gas" type="number">
-                <p>Current: {{budget.gasoline}} </p> <br/>
-                <label for="groceries">Groceries: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="groceries" name="groceries" type="number">
-                <p>Current: {{budget.groceries}} </p> <br/>
-                <label for="rent">Rent: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="rent" name="rent" type="number">
-                <p>Current: {{budget.rent}} </p> <br/>
-                <label for="transport">Transportation: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="transport" name="transport" type="number">
-                <p>Current: {{budget.transport}} </p> <br/>
-                <label for="eatingOut">Travel: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="travel" name="travel" type="number">
-                <p>Current: {{budget.travel}} </p> <br/>
-                <label for="utilities">Utilities: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="utilities" name="utilities" type="number">
-                <p>Current: {{budget.utlities}} </p> <br/>
-                <label for="investments">Investments: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="investments" name="investments" type="number">
-                <p>Current: {{budget.investments}} </p> <br/>
-                <label for="savings">Savings: </label>
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="savings" name="savings" type="number">
-                <p>Current: {{budget.savings}} </p> <br/>
-            </form>
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <form id="itemList">
+                            {% for cat, amount in budget %}
+                                <label for="item_{{ loop.index }}">{{ cat }}</label>
+<!--                                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="{{ cat }}" name="{{ cat }}" type="text">-->
+                                <p>Current: <input id="item_{{ loop.index }}" name="{{ cat }}" value="{{ amount }}"> </p> <br/>
+                            {% endfor %}
+                        </form>
+                    </div>
+                <div class="row">
+                    <form action="/budget" method="POST">
+                        <button class="button btn-primary" id="newCat" type="button">+ New Category</button>
+                        <button class="button btn-primary" id="submitBudget" type="submit" onclick="updateBudget();">Update Budget</button>
+                    </form>
+                </div>
+            </div>
 
-            <button class="button btn-primary" type="submit">Update Budget</button>
-            <button class="button btn-primary" type="button">Add Category</button>
+            <div class="col-6">
+                <h2>This is where the pie charts will go.</h2>
+            </div>
         </div>
 
-        <div class="col-6">
-            <h2>This is where the pie charts will go.</h2>
-        </div>
 
     </div>
 <!--        Add ability to add a category to budgeting -->
@@ -54,6 +40,6 @@
 <!--        Include current budget allocation next to box-->
 <!--        Add pie charts for current budget, proposed budget, and recommended budget (based on lifestyle)-->
 
-<!--    <script>type="text/javascript" src="static/js/budget.js"</script>-->
+    <script type="text/javascript" src="static/js/budget.js"></script>
 
 {% endblock %}
